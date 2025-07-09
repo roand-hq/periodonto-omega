@@ -11,7 +11,7 @@ const numerosDientes = [
 
 // Crea una cara (vestibular o lingual/palatina)
 const crearCara = (tipo) => ({
-  furca: tipo === 'palatina' || tipo === 'lingual' ? ['', ''] : [''],
+  furca: tipo === 'palatina'  ? ['', ''] : [''],
   sangrado: [false,false,false],
   placa: [false,false,false],
   anchuraEncia: '',
