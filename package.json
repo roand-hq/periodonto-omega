@@ -1,6 +1,6 @@
 {
   "name": "periodonto-omega",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Componente de periodontograma, hecho por Rodrigo Hurtado",
   "author": "Rodrigo Hurtado",
   "files":[
@@ -9,8 +9,8 @@
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/Periodontograma.es.cjs",
-      "require": "./dist/Periodontograma.umd.cjs"
+      "import": "./dist/Periodontograma.es.js",
+      "require": "./dist/Periodontograma.umd.js"
     },
      "./dist/index.css": "./dist/index.css"
   },

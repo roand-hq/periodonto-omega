@@ -284,7 +284,7 @@ export default function TablaDientes() {
                               if (valor === "1")
                                 return (
                                   <img
-                                    src="src\assets\vacio.png"
+                                    src="dist\vacio.png"
                                     alt="Furca 1"
                                     className="w-5 h-5 select-none pointer-events-none"
                                   />
@@ -292,7 +292,7 @@ export default function TablaDientes() {
                               if (valor === "2")
                                 return (
                                   <img
-                                    src="src\assets\mediolleno.png"
+                                    src="dist\mediolleno.png"
                                     alt="Furca 2"
                                     className="w-5 h-5 select-none pointer-events-none"
                                   />
@@ -300,7 +300,7 @@ export default function TablaDientes() {
                               if (valor === "3")
                                 return (
                                   <img
-                                    src="src\assets\lleno.png"
+                                    src="dist\lleno.png"
                                     alt="Furca 3"
                                     className="w-5 h-5 select-none pointer-events-none"
                                   />
@@ -322,7 +322,7 @@ export default function TablaDientes() {
                           if (valor === "1")
                             return (
                               <img
-                                src="src\assets\vacio.png"
+                                src="dist\vacio.png"
                                 alt="Furca 1"
                                 className="w-5 h-5 select-none pointer-events-none"
                               />
@@ -330,7 +330,7 @@ export default function TablaDientes() {
                           if (valor === "2")
                             return (
                               <img
-                                src="src\assets\mediolleno.png"
+                                src="dist\mediolleno.png"
                                 alt="Furca 2"
                                 className="w-5 h-5 select-none pointer-events-none"
                               />
@@ -338,9 +338,9 @@ export default function TablaDientes() {
                           if (valor === "3")
                             return (
                               <img
-                                src="src\assets\lleno.png"
+                                src="dist\lleno.png"
                                 alt="Furca 3"
-                                className="w-5 h-5 select-none pointer-events-none" 
+                                className="w-5 h-5 select-none pointer-events-none"
                               />
                             );
                           return null;

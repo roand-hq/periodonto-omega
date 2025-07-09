@@ -6,22 +6,21 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      // Entrada al componente (asegurate que este archivo exista)
-      entry: path.resolve(__dirname, 'index.js'),
+      entry: path.resolve(__dirname, 'index.js'), // Entrada del componente
       name: 'Periodontograma',
-      fileName: (format) => `Periodontograma.${format}.cjs`, // genera .js y .umd.cjs
-      formats: ['es', 'umd']
+      fileName: (format) => `Periodontograma.${format}.js`, // Genera .js y .umd.js
+      formats: ['es', 'umd'], // Formatos de salida (ES y UMD)
     },
-    cssCodeSplit: true,
+    cssCodeSplit: true, // Divide el CSS en módulos si es necesario
     rollupOptions: {
-      // No incluir react y react-dom en el bundle
+      // Excluir react y react-dom del bundle
       external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
-          'react-dom': 'ReactDOM'
-        }
-      }
-    }
-  }
+          'react-dom': 'ReactDOM', // Usado en entorno global
+        },
+      },
+    },
+  },
 });
