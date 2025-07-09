@@ -564,21 +564,21 @@ function de() {
                   return h === "1" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: "src\\assets\\vacio.png",
+                      src: "dist\\vacio.png",
                       alt: "Furca 1",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
                   ) : h === "2" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: "src\\assets\\mediolleno.png",
+                      src: "dist\\mediolleno.png",
                       alt: "Furca 2",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
                   ) : h === "3" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: "src\\assets\\lleno.png",
+                      src: "dist\\lleno.png",
                       alt: "Furca 3",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
@@ -598,21 +598,21 @@ function de() {
                     return l === "1" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: "src\\assets\\vacio.png",
+                        src: "dist\\vacio.png",
                         alt: "Furca 1",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
                     ) : l === "2" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: "src\\assets\\mediolleno.png",
+                        src: "dist\\mediolleno.png",
                         alt: "Furca 2",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
                     ) : l === "3" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: "src\\assets\\lleno.png",
+                        src: "dist\\lleno.png",
                         alt: "Furca 3",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
