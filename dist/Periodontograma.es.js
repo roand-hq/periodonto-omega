@@ -1,5 +1,5 @@
-import te, { useState as ae } from "react";
-var z = { exports: {} }, A = {};
+import se, { useState as le } from "react";
+var Y = { exports: {} }, O = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -9,29 +9,29 @@ var z = { exports: {} }, A = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var X;
-function ne() {
-  if (X) return A;
-  X = 1;
-  var c = Symbol.for("react.transitional.element"), g = Symbol.for("react.fragment");
-  function p(k, x, j) {
+var q;
+function oe() {
+  if (q) return O;
+  q = 1;
+  var c = Symbol.for("react.transitional.element"), h = Symbol.for("react.fragment");
+  function b(y, p, g) {
     var f = null;
-    if (j !== void 0 && (f = "" + j), x.key !== void 0 && (f = "" + x.key), "key" in x) {
-      j = {};
-      for (var v in x)
-        v !== "key" && (j[v] = x[v]);
-    } else j = x;
-    return x = j.ref, {
+    if (g !== void 0 && (f = "" + g), p.key !== void 0 && (f = "" + p.key), "key" in p) {
+      g = {};
+      for (var j in p)
+        j !== "key" && (g[j] = p[j]);
+    } else g = p;
+    return p = g.ref, {
       $$typeof: c,
-      type: k,
+      type: y,
       key: f,
-      ref: x !== void 0 ? x : null,
-      props: j
+      ref: p !== void 0 ? p : null,
+      props: g
     };
   }
-  return A.Fragment = g, A.jsx = p, A.jsxs = p, A;
+  return O.Fragment = h, O.jsx = b, O.jsxs = b, O;
 }
-var O = {};
+var _ = {};
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -41,13 +41,13 @@ var O = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var H;
-function se() {
-  return H || (H = 1, process.env.NODE_ENV !== "production" && function() {
+var L;
+function ce() {
+  return L || (L = 1, process.env.NODE_ENV !== "production" && function() {
     function c(e) {
       if (e == null) return null;
       if (typeof e == "function")
-        return e.$$typeof === B ? null : e.displayName || e.name || null;
+        return e.$$typeof === te ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
         case t:
@@ -58,9 +58,9 @@ function se() {
           return "StrictMode";
         case l:
           return "Suspense";
-        case h:
+        case x:
           return "SuspenseList";
-        case K:
+        case re:
           return "Activity";
       }
       if (typeof e == "object")
@@ -69,16 +69,16 @@ function se() {
         ), e.$$typeof) {
           case s:
             return "Portal";
-          case y:
+          case v:
             return (e.displayName || "Context") + ".Provider";
           case d:
             return (e._context.displayName || "Context") + ".Consumer";
           case n:
             var a = e.render;
             return e = e.displayName, e || (e = a.displayName || a.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
-          case $:
+          case P:
             return a = e.displayName || null, a !== null ? a : c(e.type) || "Memo";
-          case W:
+          case z:
             a = e._payload, e = e._init;
             try {
               return c(e(a));
@@ -87,29 +87,29 @@ function se() {
         }
       return null;
     }
-    function g(e) {
+    function h(e) {
       return "" + e;
     }
-    function p(e) {
+    function b(e) {
       try {
-        g(e);
+        h(e);
         var a = !1;
       } catch {
         a = !0;
       }
       if (a) {
         a = console;
-        var u = a.error, b = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+        var u = a.error, m = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
         return u.call(
           a,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
-          b
-        ), g(e);
+          m
+        ), h(e);
       }
     }
-    function k(e) {
+    function y(e) {
       if (e === t) return "<>";
-      if (typeof e == "object" && e !== null && e.$$typeof === W)
+      if (typeof e == "object" && e !== null && e.$$typeof === z)
         return "<...>";
       try {
         var a = c(e);
@@ -118,23 +118,23 @@ function se() {
         return "<...>";
       }
     }
-    function x() {
-      var e = F.A;
+    function p() {
+      var e = M.A;
       return e === null ? null : e.getOwner();
     }
-    function j() {
+    function g() {
       return Error("react-stack-top-frame");
     }
     function f(e) {
-      if (G.call(e, "key")) {
+      if (U.call(e, "key")) {
         var a = Object.getOwnPropertyDescriptor(e, "key").get;
         if (a && a.isReactWarning) return !1;
       }
       return e.key !== void 0;
     }
-    function v(e, a) {
+    function j(e, a) {
       function u() {
-        L || (L = !0, console.error(
+        W || (W = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
           a
         ));
@@ -146,16 +146,16 @@ function se() {
     }
     function N() {
       var e = c(this.type);
-      return U[e] || (U[e] = !0, console.error(
+      return X[e] || (X[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function w(e, a, u, b, R, E, M, Y) {
-      return u = E.ref, e = {
-        $$typeof: T,
+    function E(e, a, u, m, R, w, D, B) {
+      return u = w.ref, e = {
+        $$typeof: C,
         type: e,
         key: a,
-        props: E,
+        props: w,
         _owner: R
       }, (u !== void 0 ? u : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
@@ -174,112 +174,112 @@ function se() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: M
+        value: D
       }), Object.defineProperty(e, "_debugTask", {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: Y
+        value: B
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function C(e, a, u, b, R, E, M, Y) {
-      var m = a.children;
-      if (m !== void 0)
-        if (b)
-          if (ee(m)) {
-            for (b = 0; b < m.length; b++)
-              S(m[b]);
-            Object.freeze && Object.freeze(m);
+    function S(e, a, u, m, R, w, D, B) {
+      var A = a.children;
+      if (A !== void 0)
+        if (m)
+          if (ae(A)) {
+            for (m = 0; m < A.length; m++)
+              I(A[m]);
+            Object.freeze && Object.freeze(A);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else S(m);
-      if (G.call(a, "key")) {
-        m = c(e);
-        var P = Object.keys(a).filter(function(re) {
-          return re !== "key";
+        else I(A);
+      if (U.call(a, "key")) {
+        A = c(e);
+        var T = Object.keys(a).filter(function(ne) {
+          return ne !== "key";
         });
-        b = 0 < P.length ? "{key: someKey, " + P.join(": ..., ") + ": ...}" : "{key: someKey}", J[m + b] || (P = 0 < P.length ? "{" + P.join(": ..., ") + ": ...}" : "{}", console.error(
+        m = 0 < T.length ? "{key: someKey, " + T.join(": ..., ") + ": ...}" : "{key: someKey}", J[A + m] || (T = 0 < T.length ? "{" + T.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
-          b,
           m,
-          P,
-          m
-        ), J[m + b] = !0);
+          A,
+          T,
+          A
+        ), J[A + m] = !0);
       }
-      if (m = null, u !== void 0 && (p(u), m = "" + u), f(a) && (p(a.key), m = "" + a.key), "key" in a) {
+      if (A = null, u !== void 0 && (b(u), A = "" + u), f(a) && (b(a.key), A = "" + a.key), "key" in a) {
         u = {};
-        for (var D in a)
-          D !== "key" && (u[D] = a[D]);
+        for (var G in a)
+          G !== "key" && (u[G] = a[G]);
       } else u = a;
-      return m && v(
+      return A && j(
         u,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
-      ), w(
+      ), E(
         e,
-        m,
-        E,
+        A,
+        w,
         R,
-        x(),
+        p(),
         u,
-        M,
-        Y
+        D,
+        B
       );
     }
-    function S(e) {
-      typeof e == "object" && e !== null && e.$$typeof === T && e._store && (e._store.validated = 1);
+    function I(e) {
+      typeof e == "object" && e !== null && e.$$typeof === C && e._store && (e._store.validated = 1);
     }
-    var _ = te, T = Symbol.for("react.transitional.element"), s = Symbol.for("react.portal"), t = Symbol.for("react.fragment"), o = Symbol.for("react.strict_mode"), i = Symbol.for("react.profiler"), d = Symbol.for("react.consumer"), y = Symbol.for("react.context"), n = Symbol.for("react.forward_ref"), l = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), $ = Symbol.for("react.memo"), W = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), B = Symbol.for("react.client.reference"), F = _.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, G = Object.prototype.hasOwnProperty, ee = Array.isArray, I = console.createTask ? console.createTask : function() {
+    var k = se, C = Symbol.for("react.transitional.element"), s = Symbol.for("react.portal"), t = Symbol.for("react.fragment"), o = Symbol.for("react.strict_mode"), i = Symbol.for("react.profiler"), d = Symbol.for("react.consumer"), v = Symbol.for("react.context"), n = Symbol.for("react.forward_ref"), l = Symbol.for("react.suspense"), x = Symbol.for("react.suspense_list"), P = Symbol.for("react.memo"), z = Symbol.for("react.lazy"), re = Symbol.for("react.activity"), te = Symbol.for("react.client.reference"), M = k.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, U = Object.prototype.hasOwnProperty, ae = Array.isArray, F = console.createTask ? console.createTask : function() {
       return null;
     };
-    _ = {
+    k = {
       "react-stack-bottom-frame": function(e) {
         return e();
       }
     };
-    var L, U = {}, V = _["react-stack-bottom-frame"].bind(
-      _,
-      j
-    )(), q = I(k(j)), J = {};
-    O.Fragment = t, O.jsx = function(e, a, u, b, R) {
-      var E = 1e4 > F.recentlyCreatedOwnerStacks++;
-      return C(
+    var W, X = {}, V = k["react-stack-bottom-frame"].bind(
+      k,
+      g
+    )(), $ = F(y(g)), J = {};
+    _.Fragment = t, _.jsx = function(e, a, u, m, R) {
+      var w = 1e4 > M.recentlyCreatedOwnerStacks++;
+      return S(
         e,
         a,
         u,
         !1,
-        b,
+        m,
         R,
-        E ? Error("react-stack-top-frame") : V,
-        E ? I(k(e)) : q
+        w ? Error("react-stack-top-frame") : V,
+        w ? F(y(e)) : $
       );
-    }, O.jsxs = function(e, a, u, b, R) {
-      var E = 1e4 > F.recentlyCreatedOwnerStacks++;
-      return C(
+    }, _.jsxs = function(e, a, u, m, R) {
+      var w = 1e4 > M.recentlyCreatedOwnerStacks++;
+      return S(
         e,
         a,
         u,
         !0,
-        b,
+        m,
         R,
-        E ? Error("react-stack-top-frame") : V,
-        E ? I(k(e)) : q
+        w ? Error("react-stack-top-frame") : V,
+        w ? F(y(e)) : $
       );
     };
-  }()), O;
+  }()), _;
 }
-var Z;
-function le() {
-  return Z || (Z = 1, process.env.NODE_ENV === "production" ? z.exports = ne() : z.exports = se()), z.exports;
+var H;
+function ie() {
+  return H || (H = 1, process.env.NODE_ENV === "production" ? Y.exports = oe() : Y.exports = ce()), Y.exports;
 }
-var r = le();
-const oe = [
+var r = ie();
+const de = [
   "1.8",
   "1.7",
   "1.6",
@@ -319,8 +319,8 @@ const oe = [
   anchuraEncia: "",
   margenGingival: [0, 0, 0],
   profundidadSondaje: [0, 0, 0]
-}), ce = (c) => {
-  const g = c[0], k = g === "1" || g === "2" ? "palatina" : "lingual";
+}), ue = (c) => {
+  const h = c[0], y = h === "1" || h === "2" ? "palatina" : "lingual";
   return {
     implante: !1,
     movilidad: 0,
@@ -328,32 +328,32 @@ const oe = [
     pronostico: "",
     caras: {
       vestibular: Q("vestibular"),
-      [k]: Q(k)
+      [y]: Q(y)
     }
   };
 };
-function ie() {
-  const c = () => Object.fromEntries(oe.map((f) => [f, ce(f)])), [g, p] = ae(c());
+function fe() {
+  const c = () => Object.fromEntries(de.map((f) => [f, ue(f)])), [h, b] = le(c());
   return {
-    dientes: g,
-    actualizarDiente: (f, v) => {
-      p((N) => ({
+    dientes: h,
+    actualizarDiente: (f, j) => {
+      b((N) => ({
         ...N,
         [f]: {
           ...N[f],
-          ...v
+          ...j
         }
       }));
     },
-    actualizarCara: (f, v, N) => {
-      p((w) => ({
-        ...w,
+    actualizarCara: (f, j, N) => {
+      b((E) => ({
+        ...E,
         [f]: {
-          ...w[f],
+          ...E[f],
           caras: {
-            ...w[f].caras,
-            [v]: {
-              ...w[f].caras[v],
+            ...E[f].caras,
+            [j]: {
+              ...E[f].caras[j],
               ...N
             }
           }
@@ -361,58 +361,59 @@ function ie() {
       }));
     },
     resetearDientes: () => {
-      p(c());
+      b(c());
     }
   };
 }
-function de() {
-  const { dientes: c, actualizarDiente: g, actualizarCara: p, resetearDientes: k } = ie(), x = (s, t) => {
+const K = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEiSURBVHjapNTLKgRwFMfxT9MoKxtFJJLI0gplpYgkG4VXwBMoezasxNJaap7AAyBk4RJFYWUxlIQmGZszNS5z/9Z/c875//6Xc+F/hrCJS7zjE/dIYQ71StCGXWRjnWAbW9jDa9jPMVJIpC9OzWIDvf/ENGIR6Yhb+B3Qige8YVJpOrAfYtP5jlQYJ5RPI27xhGYYDJEtlTMae1eEwBe6VMcxruEqslMtS3hNoB2nNQidIZlAHT5qEMogm8AjemoQ6oQEjtCPhiqFxvAMs4WqtMzCzERbqY/MpaPXKiFXyAM5w3AYDtBUpshq7Fn/7ZgPxw3Giwh0502I3cj6H2byOvsQy5iKD13Ie0oWa0gWu3JL9M4FXmKwvcW6w04Mvh98DwBUVk3PjjjwlAAAAABJRU5ErkJggg==", Z = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEXSURBVHjapNO/K0VxGMfxl9NVBotuUQbc5G+QTIoMd7SYlE2M/ggW/Ac2g+gOymJXFlmuxaCkxIDBj0I5lufU6XTvUfd86tup5/mc93nO5/v90lnz2EcbL/jCPVpYxoB/NIkTpLn1iwOc4T1q1/GxjprBQwGS4g1D4aljA8/RWy9CGnjqAEljirGCfxwX0V/Kin047QLpBsqmu40MR2CuBFIGgoXwbInd6RUEl7hJIuQqOsZoguGKoDZqSYRdRd9Ik8igihqQxGhVtIjXBEcVIONo4hwG42D1sv2t8ExnhWYPoO3o7xYbmyWges43FXGk8ezvNOpq7mZn6wcrWMv9Sood1MoCnMAervAY4A984g6HmC2+9DcA99V0nm6yLEsAAAAASUVORK5CYII=", ee = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAADYSURBVHjarNQ9SkNBGAXQk1HBYC8mZhHp/OuCCNZCSOEGFLdiStcgpBAXYR0UbYONhQjWgolJM08eSUzie3Phg2nmMMxcpmJ+jtDBARrYwDuecId7fFmQBm4xXjJ9HP+FNDFYAclmiMtppI7XfyD5OctDvYLION7dzhr20VU8W/gOOFc+pwGHCaDtgN0EUDVgPQEk4COBMwx4TgB9htihsunDJl5KFPIHe5nYwqggdD19vIsCSC9+MTNp420FYBRP8ludyhyshiucxHU1e+JYlUfc4CG/aTIATpd8yNrLF8cAAAAASUVORK5CYII=";
+function me() {
+  const { dientes: c, actualizarDiente: h, actualizarCara: b, resetearDientes: y } = fe(), p = (s, t) => {
     if (t === "" || t === "-") {
-      g(s, { movilidad: t });
+      h(s, { movilidad: t });
       return;
     }
     const o = Number(t);
     if (isNaN(o))
       return;
     let i = o;
-    o < -3 && (i = -3), o > 3 && (i = 3), g(s, { movilidad: i });
-  }, j = (s, t, o, i) => {
+    o < -3 && (i = -3), o > 3 && (i = 3), h(s, { movilidad: i });
+  }, g = (s, t, o, i) => {
     if (i === "" || i === "-") {
       N(s, t, "profundidadSondaje", o, i);
       return;
     }
     const d = Number(i);
     if (isNaN(d)) return;
-    const y = Math.max(0, Math.min(15, d));
-    N(s, t, "profundidadSondaje", o, y);
+    const v = Math.max(0, Math.min(15, d));
+    N(s, t, "profundidadSondaje", o, v);
   }, f = (s, t, o, i) => {
     if (i === "" || i === "-") {
-      const $ = [...c[s].caras[t].margenGingival || []];
-      $[o] = i, p(s, t, { margenGingival: $ });
+      const P = [...c[s].caras[t].margenGingival || []];
+      P[o] = i, b(s, t, { margenGingival: P });
       return;
     }
     const d = Number(i);
     if (isNaN(d)) return;
-    let y = d;
-    d < -5 && (y = -5), d > 5 && (y = 5);
+    let v = d;
+    d < -5 && (v = -5), d > 5 && (v = 5);
     const l = [...c[s].caras[t].margenGingival || []];
-    l[o] = y, p(s, t, { margenGingival: l });
-  }, v = (s, t, o) => {
-    g(s, { [t]: o });
+    l[o] = v, b(s, t, { margenGingival: l });
+  }, j = (s, t, o) => {
+    h(s, { [t]: o });
   }, N = (s, t, o, i, d) => {
-    const y = c[s].caras[t];
+    const v = c[s].caras[t];
     let n = {};
-    if (Array.isArray(y[o])) {
-      const l = [...y[o]];
+    if (Array.isArray(v[o])) {
+      const l = [...v[o]];
       l[i] = d, n[o] = l;
     } else
       n[o] = d;
-    p(s, t, n);
-  }, w = (s, t, o) => {
+    b(s, t, n);
+  }, E = (s, t, o) => {
     const i = c[s]?.caras?.[t]?.furca?.[o] || "";
     let d;
     i === "1" ? d = "2" : i === "2" ? d = "3" : d = "1", N(s, t, "furca", o, d);
-  }, C = [
+  }, S = [
     "1.8",
     "1.7",
     "1.6",
@@ -429,7 +430,7 @@ function de() {
     "2.6",
     "2.7",
     "2.8"
-  ], S = [
+  ], I = [
     "4.8",
     "4.7",
     "4.6",
@@ -446,7 +447,7 @@ function de() {
     "3.6",
     "3.7",
     "3.8"
-  ], _ = (s) => /* @__PURE__ */ r.jsx("div", { className: "bg-white rounded-2xl shadow-2xl overflow-x-auto mb-6 p-4", children: /* @__PURE__ */ r.jsxs("table", { className: "w-full border-collapse border border-gray-300 text-xs", children: [
+  ], k = (s) => /* @__PURE__ */ r.jsx("div", { className: "bg-white rounded-2xl shadow-2xl overflow-x-auto mb-6 p-4", children: /* @__PURE__ */ r.jsxs("table", { className: "w-full border-collapse border border-gray-300 text-xs", children: [
     /* @__PURE__ */ r.jsx("thead", { children: /* @__PURE__ */ r.jsxs("tr", { children: [
       /* @__PURE__ */ r.jsx("th", { className: "border border-gray-300 bg-gray-100 p-2 sticky left-0 z-10 min-w-[150px]", children: "Parámetro" }),
       s.map((t) => /* @__PURE__ */ r.jsx(
@@ -471,7 +472,7 @@ function de() {
                 {
                   type: "checkbox",
                   checked: c[t]?.implante || !1,
-                  onChange: (o) => v(t, "implante", o.target.checked),
+                  onChange: (o) => j(t, "implante", o.target.checked),
                   className: "peer appearance-none w-full h-full border border-gray-400 rounded-sm checked:bg-blue-600"
                 }
               ),
@@ -494,7 +495,7 @@ function de() {
                 value: c[t]?.movilidad ?? "",
                 min: -3,
                 max: 3,
-                onChange: (o) => x(t, o.target.value),
+                onChange: (o) => p(t, o.target.value),
                 className: "w-full px-1 py-1 text-center border border-gray-300 rounded focus:border-green-500 focus:ring-green-200"
               }
             )
@@ -513,7 +514,7 @@ function de() {
               {
                 type: "text",
                 value: c[t]?.pronostico || "",
-                onChange: (o) => v(t, "pronostico", o.target.value),
+                onChange: (o) => j(t, "pronostico", o.target.value),
                 className: "w-full px-1 py-1 text-center border border-gray-300 rounded focus:border-purple-500 focus:ring-purple-200"
               }
             )
@@ -522,8 +523,8 @@ function de() {
         ))
       ] })
     ] })
-  ] }) }), T = (s, t, o, i, d) => {
-    const y = t === "palatina";
+  ] }) }), C = (s, t, o, i, d) => {
+    const v = t === "palatina";
     return /* @__PURE__ */ r.jsxs("div", { className: "bg-white rounded-2xl shadow-2xl overflow-x-auto mb-6 p-4", children: [
       /* @__PURE__ */ r.jsx(
         "h3",
@@ -554,31 +555,31 @@ function de() {
                 children: "Furca"
               }
             ),
-            s.map((n) => /* @__PURE__ */ r.jsx("td", { className: "border p-2 text-center", children: y ? /* @__PURE__ */ r.jsx("div", { className: "flex justify-center gap-1", children: [0, 1].map((l) => /* @__PURE__ */ r.jsx(
+            s.map((n) => /* @__PURE__ */ r.jsx("td", { className: "border p-2 text-center", children: v ? /* @__PURE__ */ r.jsx("div", { className: "flex justify-center gap-1", children: [0, 1].map((l) => /* @__PURE__ */ r.jsx(
               "div",
               {
-                onClick: () => w(n, t, l),
+                onClick: () => E(n, t, l),
                 className: "w-10 h-10 flex items-center justify-center border border-gray-300 rounded cursor-pointer hover:ring focus:outline-none",
                 children: (() => {
-                  const h = c[n]?.caras?.[t]?.furca?.[l];
-                  return h === "1" ? /* @__PURE__ */ r.jsx(
+                  const x = c[n]?.caras?.[t]?.furca?.[l];
+                  return x === "1" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: "dist\\vacio.png",
+                      src: K,
                       alt: "Furca 1",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
-                  ) : h === "2" ? /* @__PURE__ */ r.jsx(
+                  ) : x === "2" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: "dist\\mediolleno.png",
+                      src: Z,
                       alt: "Furca 2",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
-                  ) : h === "3" ? /* @__PURE__ */ r.jsx(
+                  ) : x === "3" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: "dist\\lleno.png",
+                      src: ee,
                       alt: "Furca 3",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
@@ -591,28 +592,28 @@ function de() {
               /* @__PURE__ */ r.jsx(
                 "div",
                 {
-                  onClick: () => w(n, t, 1),
+                  onClick: () => E(n, t, 1),
                   className: "w-full h-10 flex items-center justify-center border border-gray-300 rounded cursor-pointer hover:ring focus:outline-none",
                   children: (() => {
                     const l = c[n]?.caras?.[t]?.furca?.[1];
                     return l === "1" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: "dist\\vacio.png",
+                        src: K,
                         alt: "Furca 1",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
                     ) : l === "2" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: "dist\\mediolleno.png",
+                        src: Z,
                         alt: "Furca 2",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
                     ) : l === "3" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: "dist\\lleno.png",
+                        src: ee,
                         alt: "Furca 3",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
@@ -641,12 +642,12 @@ function de() {
                     {
                       type: "checkbox",
                       checked: c[n]?.caras?.[t]?.sangrado?.[l] || !1,
-                      onChange: (h) => N(
+                      onChange: (x) => N(
                         n,
                         t,
                         "sangrado",
                         l,
-                        h.target.checked
+                        x.target.checked
                       ),
                       className: "peer appearance-none w-full h-full border border-gray-400 rounded-sm"
                     }
@@ -676,12 +677,12 @@ function de() {
                     {
                       type: "checkbox",
                       checked: c[n]?.caras?.[t]?.placa?.[l] || !1,
-                      onChange: (h) => N(
+                      onChange: (x) => N(
                         n,
                         t,
                         "placa",
                         l,
-                        h.target.checked
+                        x.target.checked
                       ),
                       className: "peer appearance-none w-full h-full border border-gray-400 rounded-sm"
                     }
@@ -731,11 +732,11 @@ function de() {
               {
                 type: "text",
                 value: c[n]?.caras?.[t]?.margenGingival?.[l] ?? "",
-                onChange: (h) => f(
+                onChange: (x) => f(
                   n,
                   t,
                   l,
-                  h.target.value
+                  x.target.value
                 ),
                 className: "w-6 h-6 text-center text-xs border border-gray-300 rounded focus:ring focus:outline-none"
               },
@@ -756,11 +757,11 @@ function de() {
               {
                 type: "text",
                 value: c[n]?.caras?.[t]?.profundidadSondaje?.[l] ?? "",
-                onChange: (h) => j(
+                onChange: (x) => g(
                   n,
                   t,
                   l,
-                  h.target.value
+                  x.target.value
                 ),
                 className: "w-6 h-6 text-center text-xs border border-gray-300 rounded focus:ring focus:outline-none"
               },
@@ -788,7 +789,7 @@ function de() {
       /* @__PURE__ */ r.jsx(
         "button",
         {
-          onClick: k,
+          onClick: y,
           className: "bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl",
           children: "Resetear todos los dientes"
         }
@@ -796,16 +797,16 @@ function de() {
     ] }),
     /* @__PURE__ */ r.jsxs("section", { className: "mb-12", children: [
       /* @__PURE__ */ r.jsx("h2", { className: "text-3xl font-bold mb-6 text-center text-indigo-700", children: "SUPERIOR" }),
-      _(C),
-      T(
-        C,
+      k(S),
+      C(
+        S,
         "vestibular",
         "Cara Vestibular",
         "bg-blue-50",
         "text-blue-700"
       ),
-      T(
-        C,
+      C(
+        S,
         "palatina",
         "Cara Palatina",
         "bg-purple-50",
@@ -814,16 +815,16 @@ function de() {
     ] }),
     /* @__PURE__ */ r.jsxs("section", { className: "mb-12", children: [
       /* @__PURE__ */ r.jsx("h2", { className: "text-3xl font-bold mb-6 text-center text-red-700", children: "INFERIOR" }),
-      _(S),
-      T(
-        S,
+      k(I),
+      C(
+        I,
         "vestibular",
         "Cara Vestibular",
         "bg-green-50",
         "text-green-700"
       ),
-      T(
-        S,
+      C(
+        I,
         "lingual",
         "Cara Lingual",
         "bg-pink-50",
@@ -832,7 +833,7 @@ function de() {
     ] })
   ] }) });
 }
-const fe = () => /* @__PURE__ */ r.jsx(r.Fragment, { children: /* @__PURE__ */ r.jsx(de, {}) });
+const be = () => /* @__PURE__ */ r.jsx(r.Fragment, { children: /* @__PURE__ */ r.jsx(me, {}) });
 export {
-  fe as default
+  be as default
 };

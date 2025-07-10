@@ -1,4 +1,7 @@
 import { useDientes } from "../hooks/useDientes";
+import vacio from "../assets/vacio.png"
+import mediolleno from "../assets/mediolleno.png"
+import lleno from "../assets/lleno.png"
 export default function TablaDientes() {
   const { dientes, actualizarDiente, actualizarCara, resetearDientes } =
     useDientes();
@@ -284,7 +287,7 @@ export default function TablaDientes() {
                               if (valor === "1")
                                 return (
                                   <img
-                                    src="dist\vacio.png"
+                                    src={vacio}
                                     alt="Furca 1"
                                     className="w-5 h-5 select-none pointer-events-none"
                                   />
@@ -292,7 +295,7 @@ export default function TablaDientes() {
                               if (valor === "2")
                                 return (
                                   <img
-                                    src="dist\mediolleno.png"
+                                    src={mediolleno}
                                     alt="Furca 2"
                                     className="w-5 h-5 select-none pointer-events-none"
                                   />
@@ -300,7 +303,7 @@ export default function TablaDientes() {
                               if (valor === "3")
                                 return (
                                   <img
-                                    src="dist\lleno.png"
+                                    src={lleno}
                                     alt="Furca 3"
                                     className="w-5 h-5 select-none pointer-events-none"
                                   />
@@ -322,7 +325,7 @@ export default function TablaDientes() {
                           if (valor === "1")
                             return (
                               <img
-                                src="dist\vacio.png"
+                                src={vacio}
                                 alt="Furca 1"
                                 className="w-5 h-5 select-none pointer-events-none"
                               />
@@ -330,7 +333,7 @@ export default function TablaDientes() {
                           if (valor === "2")
                             return (
                               <img
-                                src="dist\mediolleno.png"
+                                src={mediolleno}
                                 alt="Furca 2"
                                 className="w-5 h-5 select-none pointer-events-none"
                               />
@@ -338,7 +341,7 @@ export default function TablaDientes() {
                           if (valor === "3")
                             return (
                               <img
-                                src="dist\lleno.png"
+                                src={lleno}
                                 alt="Furca 3"
                                 className="w-5 h-5 select-none pointer-events-none"
                               />
