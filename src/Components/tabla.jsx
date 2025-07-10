@@ -236,7 +236,7 @@ export default function TablaDientes() {
     return (
       <div className="bg-white rounded-2xl shadow-2xl overflow-x-auto mb-6 p-4">
         <h3
-          className={`text-xl font-bold mb-4 text-center text-white rounded py-2 bg-gradient-to-r ${colorBg}`}
+          className={`text-xl font-bold mb-4 text-center  rounded py-2 ${colorBg} ${colorText}`}
         >
           {titulo}
         </h3>
@@ -262,7 +262,7 @@ export default function TablaDientes() {
               <tr>
                 {/* El td con label: fondo oscuro y texto blanco, legible */}
                 <td
-                  className={`border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${colorBg} ${colorText} select-none`}
+                  className={`border p-3 font-semibold sticky left-0 z-10 ${colorBg} ${colorText} select-none`}
                   style={{ minWidth: "150px" }}
                 >
                   Furca
@@ -354,7 +354,7 @@ export default function TablaDientes() {
               {/* Sangrado */}
               <tr>
                 <td
-                  className={`border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${colorBg} ${colorText} select-none`}
+                  className={`border p-3 font-semibold sticky left-0 z-10 ${colorBg} ${colorText} select-none`}
                   style={{ minWidth: "150px" }}
                 >
                   Sangrado
@@ -395,7 +395,7 @@ export default function TablaDientes() {
               {/* Placa */}
               <tr>
                 <td
-                  className={`border p-3 font-semibold sticky left-0 z-10  bg-gradient-to-r ${colorBg} ${colorText} select-none`}
+                  className={`border p-3 font-semibold sticky left-0 z-10 ${colorBg} ${colorText} select-none`}
                   style={{ minWidth: "150px" }}
                 >
                   Placa
@@ -436,7 +436,7 @@ export default function TablaDientes() {
               {/* Anchura encía */}
               <tr>
                 <td
-                  className={`border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${colorBg} ${colorText} select-none`}
+                  className={`border p-3 font-semibold sticky left-0 z-10 ${colorBg} ${colorText} select-none`}
                   style={{ minWidth: "150px" }}
                 >
                   Anchura encía
@@ -464,7 +464,7 @@ export default function TablaDientes() {
               {/* Margen gingival */}
               <tr>
                 <td
-                  className={`border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${colorBg} ${colorText} select-none`}
+                  className={`border p-3 font-semibold sticky left-0 z-10  ${colorBg} ${colorText} select-none`}
                   style={{ minWidth: "150px" }}
                 >
                   Margen gingival
@@ -501,7 +501,7 @@ export default function TablaDientes() {
               {/* Profundidad de sondaje */}
               <tr>
                 <td
-                  className={`border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${colorBg} ${colorText} select-none`}
+                  className={`border p-3 font-semibold sticky left-0 z-10  ${colorBg} ${colorText} select-none`}
                   style={{ minWidth: "150px" }}
                 >
                   Profundidad de sondaje
@@ -571,15 +571,15 @@ export default function TablaDientes() {
             dientesSuperiores,
             "vestibular",
             "Cara Vestibular",
-            "from-blue-600 to-indigo-700",
-            "text-white"
+            "bg-blue-50",
+            "text-blue-700"
           )}
           {renderTablaCara(
             dientesSuperiores,
             "palatina",
             "Cara Palatina",
-            "from-teal-600 to-green-700",
-            "text-white"
+            "bg-purple-50",
+            "text-purple-700"
           )}
         </section>
 
@@ -593,15 +593,15 @@ export default function TablaDientes() {
             dientesInferiores,
             "vestibular",
             "Cara Vestibular",
-            "from-orange-500 to-red-600",
-            "text-white"
+            "bg-green-50",
+            "text-green-700"
           )}
           {renderTablaCara(
             dientesInferiores,
             "lingual",
             "Cara Lingual",
-            "from-yellow-600 to-orange-700",
-            "text-white"
+            "bg-pink-50",
+            "text-pink-700"
           )}
         </section>
       </div>

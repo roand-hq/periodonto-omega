@@ -14,22 +14,22 @@ function ne() {
   if (X) return A;
   X = 1;
   var c = Symbol.for("react.transitional.element"), g = Symbol.for("react.fragment");
-  function x(w, p, j) {
+  function p(k, x, j) {
     var f = null;
-    if (j !== void 0 && (f = "" + j), p.key !== void 0 && (f = "" + p.key), "key" in p) {
+    if (j !== void 0 && (f = "" + j), x.key !== void 0 && (f = "" + x.key), "key" in x) {
       j = {};
-      for (var v in p)
-        v !== "key" && (j[v] = p[v]);
-    } else j = p;
-    return p = j.ref, {
+      for (var v in x)
+        v !== "key" && (j[v] = x[v]);
+    } else j = x;
+    return x = j.ref, {
       $$typeof: c,
-      type: w,
+      type: k,
       key: f,
-      ref: p !== void 0 ? p : null,
+      ref: x !== void 0 ? x : null,
       props: j
     };
   }
-  return A.Fragment = g, A.jsx = x, A.jsxs = x, A;
+  return A.Fragment = g, A.jsx = p, A.jsxs = p, A;
 }
 var O = {};
 /**
@@ -69,7 +69,7 @@ function se() {
         ), e.$$typeof) {
           case s:
             return "Portal";
-          case N:
+          case y:
             return (e.displayName || "Context") + ".Provider";
           case d:
             return (e._context.displayName || "Context") + ".Consumer";
@@ -90,7 +90,7 @@ function se() {
     function g(e) {
       return "" + e;
     }
-    function x(e) {
+    function p(e) {
       try {
         g(e);
         var a = !1;
@@ -107,7 +107,7 @@ function se() {
         ), g(e);
       }
     }
-    function w(e) {
+    function k(e) {
       if (e === t) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === W)
         return "<...>";
@@ -118,7 +118,7 @@ function se() {
         return "<...>";
       }
     }
-    function p() {
+    function x() {
       var e = F.A;
       return e === null ? null : e.getOwner();
     }
@@ -144,13 +144,13 @@ function se() {
         configurable: !0
       });
     }
-    function y() {
+    function N() {
       var e = c(this.type);
       return U[e] || (U[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function k(e, a, u, b, R, E, M, Y) {
+    function w(e, a, u, b, R, E, M, Y) {
       return u = E.ref, e = {
         $$typeof: T,
         type: e,
@@ -159,7 +159,7 @@ function se() {
         _owner: R
       }, (u !== void 0 ? u : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
-        get: y
+        get: N
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -213,7 +213,7 @@ React keys must be passed directly to JSX without using spread:
           m
         ), J[m + b] = !0);
       }
-      if (m = null, u !== void 0 && (x(u), m = "" + u), f(a) && (x(a.key), m = "" + a.key), "key" in a) {
+      if (m = null, u !== void 0 && (p(u), m = "" + u), f(a) && (p(a.key), m = "" + a.key), "key" in a) {
         u = {};
         for (var D in a)
           D !== "key" && (u[D] = a[D]);
@@ -221,12 +221,12 @@ React keys must be passed directly to JSX without using spread:
       return m && v(
         u,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
-      ), k(
+      ), w(
         e,
         m,
         E,
         R,
-        p(),
+        x(),
         u,
         M,
         Y
@@ -235,7 +235,7 @@ React keys must be passed directly to JSX without using spread:
     function S(e) {
       typeof e == "object" && e !== null && e.$$typeof === T && e._store && (e._store.validated = 1);
     }
-    var _ = te, T = Symbol.for("react.transitional.element"), s = Symbol.for("react.portal"), t = Symbol.for("react.fragment"), o = Symbol.for("react.strict_mode"), i = Symbol.for("react.profiler"), d = Symbol.for("react.consumer"), N = Symbol.for("react.context"), n = Symbol.for("react.forward_ref"), l = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), $ = Symbol.for("react.memo"), W = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), B = Symbol.for("react.client.reference"), F = _.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, G = Object.prototype.hasOwnProperty, ee = Array.isArray, I = console.createTask ? console.createTask : function() {
+    var _ = te, T = Symbol.for("react.transitional.element"), s = Symbol.for("react.portal"), t = Symbol.for("react.fragment"), o = Symbol.for("react.strict_mode"), i = Symbol.for("react.profiler"), d = Symbol.for("react.consumer"), y = Symbol.for("react.context"), n = Symbol.for("react.forward_ref"), l = Symbol.for("react.suspense"), h = Symbol.for("react.suspense_list"), $ = Symbol.for("react.memo"), W = Symbol.for("react.lazy"), K = Symbol.for("react.activity"), B = Symbol.for("react.client.reference"), F = _.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, G = Object.prototype.hasOwnProperty, ee = Array.isArray, I = console.createTask ? console.createTask : function() {
       return null;
     };
     _ = {
@@ -246,7 +246,7 @@ React keys must be passed directly to JSX without using spread:
     var L, U = {}, V = _["react-stack-bottom-frame"].bind(
       _,
       j
-    )(), q = I(w(j)), J = {};
+    )(), q = I(k(j)), J = {};
     O.Fragment = t, O.jsx = function(e, a, u, b, R) {
       var E = 1e4 > F.recentlyCreatedOwnerStacks++;
       return C(
@@ -257,7 +257,7 @@ React keys must be passed directly to JSX without using spread:
         b,
         R,
         E ? Error("react-stack-top-frame") : V,
-        E ? I(w(e)) : q
+        E ? I(k(e)) : q
       );
     }, O.jsxs = function(e, a, u, b, R) {
       var E = 1e4 > F.recentlyCreatedOwnerStacks++;
@@ -269,7 +269,7 @@ React keys must be passed directly to JSX without using spread:
         b,
         R,
         E ? Error("react-stack-top-frame") : V,
-        E ? I(w(e)) : q
+        E ? I(k(e)) : q
       );
     };
   }()), O;
@@ -320,7 +320,7 @@ const oe = [
   margenGingival: [0, 0, 0],
   profundidadSondaje: [0, 0, 0]
 }), ce = (c) => {
-  const g = c[0], w = g === "1" || g === "2" ? "palatina" : "lingual";
+  const g = c[0], k = g === "1" || g === "2" ? "palatina" : "lingual";
   return {
     implante: !1,
     movilidad: 0,
@@ -328,45 +328,45 @@ const oe = [
     pronostico: "",
     caras: {
       vestibular: Q("vestibular"),
-      [w]: Q(w)
+      [k]: Q(k)
     }
   };
 };
 function ie() {
-  const c = () => Object.fromEntries(oe.map((f) => [f, ce(f)])), [g, x] = ae(c());
+  const c = () => Object.fromEntries(oe.map((f) => [f, ce(f)])), [g, p] = ae(c());
   return {
     dientes: g,
     actualizarDiente: (f, v) => {
-      x((y) => ({
-        ...y,
+      p((N) => ({
+        ...N,
         [f]: {
-          ...y[f],
+          ...N[f],
           ...v
         }
       }));
     },
-    actualizarCara: (f, v, y) => {
-      x((k) => ({
-        ...k,
+    actualizarCara: (f, v, N) => {
+      p((w) => ({
+        ...w,
         [f]: {
-          ...k[f],
+          ...w[f],
           caras: {
-            ...k[f].caras,
+            ...w[f].caras,
             [v]: {
-              ...k[f].caras[v],
-              ...y
+              ...w[f].caras[v],
+              ...N
             }
           }
         }
       }));
     },
     resetearDientes: () => {
-      x(c());
+      p(c());
     }
   };
 }
 function de() {
-  const { dientes: c, actualizarDiente: g, actualizarCara: x, resetearDientes: w } = ie(), p = (s, t) => {
+  const { dientes: c, actualizarDiente: g, actualizarCara: p, resetearDientes: k } = ie(), x = (s, t) => {
     if (t === "" || t === "-") {
       g(s, { movilidad: t });
       return;
@@ -378,40 +378,40 @@ function de() {
     o < -3 && (i = -3), o > 3 && (i = 3), g(s, { movilidad: i });
   }, j = (s, t, o, i) => {
     if (i === "" || i === "-") {
-      y(s, t, "profundidadSondaje", o, i);
+      N(s, t, "profundidadSondaje", o, i);
       return;
     }
     const d = Number(i);
     if (isNaN(d)) return;
-    const N = Math.max(0, Math.min(15, d));
-    y(s, t, "profundidadSondaje", o, N);
+    const y = Math.max(0, Math.min(15, d));
+    N(s, t, "profundidadSondaje", o, y);
   }, f = (s, t, o, i) => {
     if (i === "" || i === "-") {
       const $ = [...c[s].caras[t].margenGingival || []];
-      $[o] = i, x(s, t, { margenGingival: $ });
+      $[o] = i, p(s, t, { margenGingival: $ });
       return;
     }
     const d = Number(i);
     if (isNaN(d)) return;
-    let N = d;
-    d < -5 && (N = -5), d > 5 && (N = 5);
+    let y = d;
+    d < -5 && (y = -5), d > 5 && (y = 5);
     const l = [...c[s].caras[t].margenGingival || []];
-    l[o] = N, x(s, t, { margenGingival: l });
+    l[o] = y, p(s, t, { margenGingival: l });
   }, v = (s, t, o) => {
     g(s, { [t]: o });
-  }, y = (s, t, o, i, d) => {
-    const N = c[s].caras[t];
+  }, N = (s, t, o, i, d) => {
+    const y = c[s].caras[t];
     let n = {};
-    if (Array.isArray(N[o])) {
-      const l = [...N[o]];
+    if (Array.isArray(y[o])) {
+      const l = [...y[o]];
       l[i] = d, n[o] = l;
     } else
       n[o] = d;
-    x(s, t, n);
-  }, k = (s, t, o) => {
+    p(s, t, n);
+  }, w = (s, t, o) => {
     const i = c[s]?.caras?.[t]?.furca?.[o] || "";
     let d;
-    i === "1" ? d = "2" : i === "2" ? d = "3" : d = "1", y(s, t, "furca", o, d);
+    i === "1" ? d = "2" : i === "2" ? d = "3" : d = "1", N(s, t, "furca", o, d);
   }, C = [
     "1.8",
     "1.7",
@@ -494,7 +494,7 @@ function de() {
                 value: c[t]?.movilidad ?? "",
                 min: -3,
                 max: 3,
-                onChange: (o) => p(t, o.target.value),
+                onChange: (o) => x(t, o.target.value),
                 className: "w-full px-1 py-1 text-center border border-gray-300 rounded focus:border-green-500 focus:ring-green-200"
               }
             )
@@ -523,12 +523,12 @@ function de() {
       ] })
     ] })
   ] }) }), T = (s, t, o, i, d) => {
-    const N = t === "palatina";
+    const y = t === "palatina";
     return /* @__PURE__ */ r.jsxs("div", { className: "bg-white rounded-2xl shadow-2xl overflow-x-auto mb-6 p-4", children: [
       /* @__PURE__ */ r.jsx(
         "h3",
         {
-          className: `text-xl font-bold mb-4 text-center text-white rounded py-2 bg-gradient-to-r ${i}`,
+          className: `text-xl font-bold mb-4 text-center  rounded py-2 ${i} ${d}`,
           children: o
         }
       ),
@@ -549,15 +549,15 @@ function de() {
             /* @__PURE__ */ r.jsx(
               "td",
               {
-                className: `border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${i} ${d} select-none`,
+                className: `border p-3 font-semibold sticky left-0 z-10 ${i} ${d} select-none`,
                 style: { minWidth: "150px" },
                 children: "Furca"
               }
             ),
-            s.map((n) => /* @__PURE__ */ r.jsx("td", { className: "border p-2 text-center", children: N ? /* @__PURE__ */ r.jsx("div", { className: "flex justify-center gap-1", children: [0, 1].map((l) => /* @__PURE__ */ r.jsx(
+            s.map((n) => /* @__PURE__ */ r.jsx("td", { className: "border p-2 text-center", children: y ? /* @__PURE__ */ r.jsx("div", { className: "flex justify-center gap-1", children: [0, 1].map((l) => /* @__PURE__ */ r.jsx(
               "div",
               {
-                onClick: () => k(n, t, l),
+                onClick: () => w(n, t, l),
                 className: "w-10 h-10 flex items-center justify-center border border-gray-300 rounded cursor-pointer hover:ring focus:outline-none",
                 children: (() => {
                   const h = c[n]?.caras?.[t]?.furca?.[l];
@@ -591,7 +591,7 @@ function de() {
               /* @__PURE__ */ r.jsx(
                 "div",
                 {
-                  onClick: () => k(n, t, 1),
+                  onClick: () => w(n, t, 1),
                   className: "w-full h-10 flex items-center justify-center border border-gray-300 rounded cursor-pointer hover:ring focus:outline-none",
                   children: (() => {
                     const l = c[n]?.caras?.[t]?.furca?.[1];
@@ -626,7 +626,7 @@ function de() {
             /* @__PURE__ */ r.jsx(
               "td",
               {
-                className: `border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${i} ${d} select-none`,
+                className: `border p-3 font-semibold sticky left-0 z-10 ${i} ${d} select-none`,
                 style: { minWidth: "150px" },
                 children: "Sangrado"
               }
@@ -641,7 +641,7 @@ function de() {
                     {
                       type: "checkbox",
                       checked: c[n]?.caras?.[t]?.sangrado?.[l] || !1,
-                      onChange: (h) => y(
+                      onChange: (h) => N(
                         n,
                         t,
                         "sangrado",
@@ -661,7 +661,7 @@ function de() {
             /* @__PURE__ */ r.jsx(
               "td",
               {
-                className: `border p-3 font-semibold sticky left-0 z-10  bg-gradient-to-r ${i} ${d} select-none`,
+                className: `border p-3 font-semibold sticky left-0 z-10 ${i} ${d} select-none`,
                 style: { minWidth: "150px" },
                 children: "Placa"
               }
@@ -676,7 +676,7 @@ function de() {
                     {
                       type: "checkbox",
                       checked: c[n]?.caras?.[t]?.placa?.[l] || !1,
-                      onChange: (h) => y(
+                      onChange: (h) => N(
                         n,
                         t,
                         "placa",
@@ -696,7 +696,7 @@ function de() {
             /* @__PURE__ */ r.jsx(
               "td",
               {
-                className: `border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${i} ${d} select-none`,
+                className: `border p-3 font-semibold sticky left-0 z-10 ${i} ${d} select-none`,
                 style: { minWidth: "150px" },
                 children: "Anchura encía"
               }
@@ -706,7 +706,7 @@ function de() {
               {
                 type: "text",
                 value: c[n]?.caras?.[t]?.anchuraEncia || "",
-                onChange: (l) => y(
+                onChange: (l) => N(
                   n,
                   t,
                   "anchuraEncia",
@@ -721,7 +721,7 @@ function de() {
             /* @__PURE__ */ r.jsx(
               "td",
               {
-                className: `border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${i} ${d} select-none`,
+                className: `border p-3 font-semibold sticky left-0 z-10  ${i} ${d} select-none`,
                 style: { minWidth: "150px" },
                 children: "Margen gingival"
               }
@@ -746,7 +746,7 @@ function de() {
             /* @__PURE__ */ r.jsx(
               "td",
               {
-                className: `border p-3 font-semibold sticky left-0 z-10 bg-gradient-to-r ${i} ${d} select-none`,
+                className: `border p-3 font-semibold sticky left-0 z-10  ${i} ${d} select-none`,
                 style: { minWidth: "150px" },
                 children: "Profundidad de sondaje"
               }
@@ -788,7 +788,7 @@ function de() {
       /* @__PURE__ */ r.jsx(
         "button",
         {
-          onClick: w,
+          onClick: k,
           className: "bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl",
           children: "Resetear todos los dientes"
         }
@@ -801,15 +801,15 @@ function de() {
         C,
         "vestibular",
         "Cara Vestibular",
-        "from-blue-600 to-indigo-700",
-        "text-white"
+        "bg-blue-50",
+        "text-blue-700"
       ),
       T(
         C,
         "palatina",
         "Cara Palatina",
-        "from-teal-600 to-green-700",
-        "text-white"
+        "bg-purple-50",
+        "text-purple-700"
       )
     ] }),
     /* @__PURE__ */ r.jsxs("section", { className: "mb-12", children: [
@@ -819,15 +819,15 @@ function de() {
         S,
         "vestibular",
         "Cara Vestibular",
-        "from-orange-500 to-red-600",
-        "text-white"
+        "bg-green-50",
+        "text-green-700"
       ),
       T(
         S,
         "lingual",
         "Cara Lingual",
-        "from-yellow-600 to-orange-700",
-        "text-white"
+        "bg-pink-50",
+        "text-pink-700"
       )
     ] })
   ] }) });
