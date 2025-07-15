@@ -2,6 +2,7 @@ import { useDientes } from "../hooks/useDientes";
 import vacio from "../assets/vacio.png"
 import mediolleno from "../assets/mediolleno.png"
 import lleno from "../assets/lleno.png"
+import Grafica from "./grafica";
 export default function TablaDientes() {
   const { dientes, actualizarDiente, actualizarCara, resetearDientes } =
     useDientes();
@@ -542,6 +543,9 @@ export default function TablaDientes() {
     );
   };
 
+  const renderGrafica = (cara,lado) => {
+    return <Grafica cara={cara} lado={lado}></Grafica>
+  }
   return (
     <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
       <div className="max-w-full mx-auto">
@@ -577,6 +581,7 @@ export default function TablaDientes() {
             "bg-blue-50",
             "text-blue-700"
           )}
+          {renderGrafica("vestibular", "arriba")}
           {renderTablaCara(
             dientesSuperiores,
             "palatina",
