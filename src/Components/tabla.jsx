@@ -1,7 +1,7 @@
 import { useDientes } from "../hooks/useDientes";
-import vacio from "../assets/vacio.png"
-import mediolleno from "../assets/mediolleno.png"
-import lleno from "../assets/lleno.png"
+import vacio from "../assets/vacio.png";
+import mediolleno from "../assets/mediolleno.png";
+import lleno from "../assets/lleno.png";
 import Grafica from "./grafica";
 export default function TablaDientes() {
   const { dientes, actualizarDiente, actualizarCara, resetearDientes } =
@@ -92,13 +92,17 @@ export default function TablaDientes() {
   const handleFurcaClick = (numero, cara, index) => {
     const actual = dientes[numero]?.caras?.[cara]?.furca?.[index] || "";
     let nuevoValor;
-
-    if (actual === "1") nuevoValor = "2";
+    if (actual === "") nuevoValor = "1";
+    else if (actual === "1") nuevoValor = "2";
     else if (actual === "2") nuevoValor = "3";
-    else nuevoValor = "1"; // si está vacío o cualquier otro valor, empieza desde 1
+    else nuevoValor = ""; // si está vacío o cualquier otro valor, empieza desde 1
 
     handleCaraChange(numero, cara, "furca", index, nuevoValor);
   };
+
+  const printData = () => {
+    console.log(dientes)
+  }
   // Dientes superior e inferior
   const dientesSuperiores = [
     "1.8",
@@ -285,6 +289,7 @@ export default function TablaDientes() {
                             {(() => {
                               const valor =
                                 dientes[numero]?.caras?.[cara]?.furca?.[idx];
+
                               if (valor === "1")
                                 return (
                                   <img
@@ -543,11 +548,11 @@ export default function TablaDientes() {
     );
   };
 
-  const renderGrafica = (cara,lado) => {
-    return <Grafica cara={cara} lado={lado}></Grafica>
-  }
+  const renderGrafica = (cara, lado) => {
+    return <Grafica cara={cara} lado={lado}></Grafica>;
+  };
   return (
-    <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div className="p-6 bg-[#f9fafb] min-h-screen">
       <div className="max-w-full mx-auto">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-4">
@@ -566,6 +571,13 @@ export default function TablaDientes() {
           >
             Resetear todos los dientes
           </button>
+          
+          <button
+          onClick={printData}
+          className="ml-4 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
+           
+            Guardar
+          </button>
         </div>
 
         {/* SUPERIOR */}
@@ -581,7 +593,7 @@ export default function TablaDientes() {
             "bg-blue-50",
             "text-blue-700"
           )}
-          {renderGrafica("vestibular", "arriba")}
+          {/* {renderGrafica("vestibular", "arriba")} */}
           {renderTablaCara(
             dientesSuperiores,
             "palatina",
