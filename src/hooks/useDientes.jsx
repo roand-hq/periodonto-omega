@@ -37,12 +37,18 @@ const crearDiente = (numero) => {
 };
 
 // Hook principal
-export function useDientes() {
+export function useDientes(initialState = null) {
   const dientesIniciales = () =>
     Object.fromEntries(numerosDientes.map(n => [n, crearDiente(n)]));
 
-  const [dientes, setDientes] = useState(dientesIniciales());
+  const [dientes, setDientes] = useState(dientesIniciales() || initialState);
 
+  useState(() => {
+    if (initialState) {
+      setDientes(initialState);
+    }
+  } , [initialState]);
+  
   // Actualiza cualquier campo de un diente completo
   const actualizarDiente = (numero, nuevosDatos) => {
     setDientes(prev => ({

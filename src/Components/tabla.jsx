@@ -3,9 +3,9 @@ import vacio from "../assets/vacio.png";
 import mediolleno from "../assets/mediolleno.png";
 import lleno from "../assets/lleno.png";
 import Grafica from "./grafica";
-export default function TablaDientes() {
+export default function TablaDientes({savedState, onSave}) {
   const { dientes, actualizarDiente, actualizarCara, resetearDientes } =
-    useDientes();
+    useDientes(savedState);
 
   const esSuperior = (numero) =>
     numero.startsWith("1") || numero.startsWith("2");

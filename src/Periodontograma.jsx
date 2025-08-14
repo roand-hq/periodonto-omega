@@ -1,10 +1,10 @@
 import './App.css'
 import { useDientes } from './hooks/useDientes';
 import TablaDientes from './Components/tabla';
-const Periodontograma = () => {
+const Periodontograma = ({savedState, onSave}) => {
   return (
    <>
-   <TablaDientes></TablaDientes>
+   <TablaDientes savedState={savedState} onSave={onSave}></TablaDientes>
    </>
   );
 };
