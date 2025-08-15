@@ -1,5 +1,5 @@
 import se, { useState as le, useEffect as oe } from "react";
-var F = { exports: {} }, _ = {};
+var M = { exports: {} }, _ = {};
 /**
  * @license React
  * react-jsx-runtime.production.js
@@ -14,18 +14,18 @@ function ce() {
   if (L) return _;
   L = 1;
   var f = Symbol.for("react.transitional.element"), g = Symbol.for("react.fragment");
-  function d(m, A, N) {
+  function d(A, m, N) {
     var E = null;
-    if (N !== void 0 && (E = "" + N), A.key !== void 0 && (E = "" + A.key), "key" in A) {
+    if (N !== void 0 && (E = "" + N), m.key !== void 0 && (E = "" + m.key), "key" in m) {
       N = {};
-      for (var b in A)
-        b !== "key" && (N[b] = A[b]);
-    } else N = A;
-    return A = N.ref, {
+      for (var b in m)
+        b !== "key" && (N[b] = m[b]);
+    } else N = m;
+    return m = N.ref, {
       $$typeof: f,
-      type: m,
+      type: A,
       key: E,
-      ref: A !== void 0 ? A : null,
+      ref: m !== void 0 ? m : null,
       props: N
     };
   }
@@ -60,7 +60,7 @@ function ie() {
           return "Suspense";
         case n:
           return "SuspenseList";
-        case M:
+        case F:
           return "Activity";
       }
       if (typeof e == "object")
@@ -99,15 +99,15 @@ function ie() {
       }
       if (a) {
         a = console;
-        var u = a.error, x = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
+        var u = a.error, p = typeof Symbol == "function" && Symbol.toStringTag && e[Symbol.toStringTag] || e.constructor.name || "Object";
         return u.call(
           a,
           "The provided key is an unsupported type %s. This value must be coerced to a string before using it here.",
-          x
+          p
         ), g(e);
       }
     }
-    function m(e) {
+    function A(e) {
       if (e === C) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === h)
         return "<...>";
@@ -118,7 +118,7 @@ function ie() {
         return "<...>";
       }
     }
-    function A() {
+    function m() {
       var e = D.A;
       return e === null ? null : e.getOwner();
     }
@@ -126,7 +126,7 @@ function ie() {
       return Error("react-stack-top-frame");
     }
     function E(e) {
-      if (W.call(e, "key")) {
+      if (z.call(e, "key")) {
         var a = Object.getOwnPropertyDescriptor(e, "key").get;
         if (a && a.isReactWarning) return !1;
       }
@@ -144,13 +144,13 @@ function ie() {
         configurable: !0
       });
     }
-    function R() {
+    function k() {
       var e = f(this.type);
       return V[e] || (V[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function w(e, a, u, x, S, y, B, z) {
+    function w(e, a, u, p, S, y, B, U) {
       return u = y.ref, e = {
         $$typeof: I,
         type: e,
@@ -159,7 +159,7 @@ function ie() {
         _owner: S
       }, (u !== void 0 ? u : null) !== null ? Object.defineProperty(e, "ref", {
         enumerable: !1,
-        get: R
+        get: k
       }) : Object.defineProperty(e, "ref", { enumerable: !1, value: null }), e._store = {}, Object.defineProperty(e._store, "validated", {
         configurable: !1,
         enumerable: !1,
@@ -179,104 +179,104 @@ function ie() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: z
+        value: U
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function j(e, a, u, x, S, y, B, z) {
-      var p = a.children;
-      if (p !== void 0)
-        if (x)
-          if (ae(p)) {
-            for (x = 0; x < p.length; x++)
-              O(p[x]);
-            Object.freeze && Object.freeze(p);
+    function j(e, a, u, p, S, y, B, U) {
+      var x = a.children;
+      if (x !== void 0)
+        if (p)
+          if (ae(x)) {
+            for (p = 0; p < x.length; p++)
+              O(x[p]);
+            Object.freeze && Object.freeze(x);
           } else
             console.error(
               "React.jsx: Static children should always be an array. You are likely explicitly calling React.jsxs or React.jsxDEV. Use the Babel transform instead."
             );
-        else O(p);
-      if (W.call(a, "key")) {
-        p = f(e);
+        else O(x);
+      if (z.call(a, "key")) {
+        x = f(e);
         var T = Object.keys(a).filter(function(ne) {
           return ne !== "key";
         });
-        x = 0 < T.length ? "{key: someKey, " + T.join(": ..., ") + ": ...}" : "{key: someKey}", q[p + x] || (T = 0 < T.length ? "{" + T.join(": ..., ") + ": ...}" : "{}", console.error(
+        p = 0 < T.length ? "{key: someKey, " + T.join(": ..., ") + ": ...}" : "{key: someKey}", q[x + p] || (T = 0 < T.length ? "{" + T.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
 React keys must be passed directly to JSX without using spread:
   let props = %s;
   <%s key={someKey} {...props} />`,
-          x,
           p,
+          x,
           T,
-          p
-        ), q[p + x] = !0);
+          x
+        ), q[x + p] = !0);
       }
-      if (p = null, u !== void 0 && (d(u), p = "" + u), E(a) && (d(a.key), p = "" + a.key), "key" in a) {
+      if (x = null, u !== void 0 && (d(u), x = "" + u), E(a) && (d(a.key), x = "" + a.key), "key" in a) {
         u = {};
-        for (var U in a)
-          U !== "key" && (u[U] = a[U]);
+        for (var W in a)
+          W !== "key" && (u[W] = a[W]);
       } else u = a;
-      return p && b(
+      return x && b(
         u,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
       ), w(
         e,
-        p,
+        x,
         y,
         S,
-        A(),
+        m(),
         u,
         B,
-        z
+        U
       );
     }
     function O(e) {
       typeof e == "object" && e !== null && e.$$typeof === I && e._store && (e._store.validated = 1);
     }
-    var k = se, I = Symbol.for("react.transitional.element"), Y = Symbol.for("react.portal"), C = Symbol.for("react.fragment"), s = Symbol.for("react.strict_mode"), t = Symbol.for("react.profiler"), o = Symbol.for("react.consumer"), c = Symbol.for("react.context"), i = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), n = Symbol.for("react.suspense_list"), l = Symbol.for("react.memo"), h = Symbol.for("react.lazy"), M = Symbol.for("react.activity"), te = Symbol.for("react.client.reference"), D = k.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, W = Object.prototype.hasOwnProperty, ae = Array.isArray, G = console.createTask ? console.createTask : function() {
+    var R = se, I = Symbol.for("react.transitional.element"), Y = Symbol.for("react.portal"), C = Symbol.for("react.fragment"), s = Symbol.for("react.strict_mode"), t = Symbol.for("react.profiler"), o = Symbol.for("react.consumer"), c = Symbol.for("react.context"), i = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), n = Symbol.for("react.suspense_list"), l = Symbol.for("react.memo"), h = Symbol.for("react.lazy"), F = Symbol.for("react.activity"), te = Symbol.for("react.client.reference"), D = R.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, z = Object.prototype.hasOwnProperty, ae = Array.isArray, G = console.createTask ? console.createTask : function() {
       return null;
     };
-    k = {
+    R = {
       "react-stack-bottom-frame": function(e) {
         return e();
       }
     };
-    var X, V = {}, $ = k["react-stack-bottom-frame"].bind(
-      k,
+    var X, V = {}, $ = R["react-stack-bottom-frame"].bind(
+      R,
       N
-    )(), J = G(m(N)), q = {};
-    P.Fragment = C, P.jsx = function(e, a, u, x, S) {
+    )(), J = G(A(N)), q = {};
+    P.Fragment = C, P.jsx = function(e, a, u, p, S) {
       var y = 1e4 > D.recentlyCreatedOwnerStacks++;
       return j(
         e,
         a,
         u,
         !1,
-        x,
+        p,
         S,
         y ? Error("react-stack-top-frame") : $,
-        y ? G(m(e)) : J
+        y ? G(A(e)) : J
       );
-    }, P.jsxs = function(e, a, u, x, S) {
+    }, P.jsxs = function(e, a, u, p, S) {
       var y = 1e4 > D.recentlyCreatedOwnerStacks++;
       return j(
         e,
         a,
         u,
         !0,
-        x,
+        p,
         S,
         y ? Error("react-stack-top-frame") : $,
-        y ? G(m(e)) : J
+        y ? G(A(e)) : J
       );
     };
   }()), P;
 }
 var Q;
 function de() {
-  return Q || (Q = 1, process.env.NODE_ENV === "production" ? F.exports = ce() : F.exports = ie()), F.exports;
+  return Q || (Q = 1, process.env.NODE_ENV === "production" ? M.exports = ce() : M.exports = ie()), M.exports;
 }
 var r = de();
 const ue = [
@@ -320,7 +320,7 @@ const ue = [
   margenGingival: [0, 0, 0],
   profundidadSondaje: [0, 0, 0]
 }), fe = (f) => {
-  const g = f[0], m = g === "1" || g === "2" ? "palatina" : "lingual";
+  const g = f[0], A = g === "1" || g === "2" ? "palatina" : "lingual";
   return {
     implante: !1,
     movilidad: 0,
@@ -328,34 +328,34 @@ const ue = [
     pronostico: "",
     caras: {
       vestibular: K("vestibular"),
-      [m]: K(m)
+      [A]: K(A)
     }
   };
 };
 function be(f = null) {
-  const g = () => Object.fromEntries(ue.map((b) => [b, fe(b)])), [d, m] = le(f || g());
+  const g = () => Object.fromEntries(ue.map((b) => [b, fe(b)])), [d, A] = le(f || g());
   return oe(() => {
-    f && m(f);
+    f && A(f);
   }, []), {
     dientes: d,
-    actualizarDiente: (b, R) => {
-      m((w) => ({
+    actualizarDiente: (b, k) => {
+      A((w) => ({
         ...w,
         [b]: {
           ...w[b],
-          ...R
+          ...k
         }
       }));
     },
-    actualizarCara: (b, R, w) => {
-      m((j) => ({
+    actualizarCara: (b, k, w) => {
+      A((j) => ({
         ...j,
         [b]: {
           ...j[b],
           caras: {
             ...j[b].caras,
-            [R]: {
-              ...j[b].caras[R],
+            [k]: {
+              ...j[b].caras[k],
               ...w
             }
           }
@@ -363,22 +363,22 @@ function be(f = null) {
       }));
     },
     resetearDientes: () => {
-      m(g());
+      A(g());
     }
   };
 }
 const Z = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEiSURBVHjapNTLKgRwFMfxT9MoKxtFJJLI0gplpYgkG4VXwBMoezasxNJaap7AAyBk4RJFYWUxlIQmGZszNS5z/9Z/c875//6Xc+F/hrCJS7zjE/dIYQ71StCGXWRjnWAbW9jDa9jPMVJIpC9OzWIDvf/ENGIR6Yhb+B3Qige8YVJpOrAfYtP5jlQYJ5RPI27xhGYYDJEtlTMae1eEwBe6VMcxruEqslMtS3hNoB2nNQidIZlAHT5qEMogm8AjemoQ6oQEjtCPhiqFxvAMs4WqtMzCzERbqY/MpaPXKiFXyAM5w3AYDtBUpshq7Fn/7ZgPxw3Giwh0502I3cj6H2byOvsQy5iKD13Ie0oWa0gWu3JL9M4FXmKwvcW6w04Mvh98DwBUVk3PjjjwlAAAAABJRU5ErkJggg==", ee = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEXSURBVHjapNO/K0VxGMfxl9NVBotuUQbc5G+QTIoMd7SYlE2M/ggW/Ac2g+gOymJXFlmuxaCkxIDBj0I5lufU6XTvUfd86tup5/mc93nO5/v90lnz2EcbL/jCPVpYxoB/NIkTpLn1iwOc4T1q1/GxjprBQwGS4g1D4aljA8/RWy9CGnjqAEljirGCfxwX0V/Kin047QLpBsqmu40MR2CuBFIGgoXwbInd6RUEl7hJIuQqOsZoguGKoDZqSYRdRd9Ik8igihqQxGhVtIjXBEcVIONo4hwG42D1sv2t8ExnhWYPoO3o7xYbmyWges43FXGk8ezvNOpq7mZn6wcrWMv9Sood1MoCnMAervAY4A984g6HmC2+9DcA99V0nm6yLEsAAAAASUVORK5CYII=", re = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAADYSURBVHjarNQ9SkNBGAXQk1HBYC8mZhHp/OuCCNZCSOEGFLdiStcgpBAXYR0UbYONhQjWgolJM08eSUzie3Phg2nmMMxcpmJ+jtDBARrYwDuecId7fFmQBm4xXjJ9HP+FNDFYAclmiMtppI7XfyD5OctDvYLION7dzhr20VU8W/gOOFc+pwGHCaDtgN0EUDVgPQEk4COBMwx4TgB9htihsunDJl5KFPIHe5nYwqggdD19vIsCSC9+MTNp420FYBRP8ludyhyshiucxHU1e+JYlUfc4CG/aTIATpd8yNrLF8cAAAAASUVORK5CYII=";
-function me({ savedState: f, onSave: g }) {
-  const { dientes: d, actualizarDiente: m, actualizarCara: A, resetearDientes: N } = be(f), E = (s, t) => {
+function Ae({ savedState: f, onSave: g }) {
+  const { dientes: d, actualizarDiente: A, actualizarCara: m, resetearDientes: N } = be(f), E = (s, t) => {
     if (t === "" || t === "-") {
-      m(s, { movilidad: t });
+      A(s, { movilidad: t });
       return;
     }
     const o = Number(t);
     if (isNaN(o))
       return;
     let c = o;
-    o < -3 && (c = -3), o > 3 && (c = 3), m(s, { movilidad: c });
+    o < -3 && (c = -3), o > 3 && (c = 3), A(s, { movilidad: c });
   }, b = (s, t, o, c) => {
     if (c === "" || c === "-") {
       j(s, t, "profundidadSondaje", o, c);
@@ -388,10 +388,10 @@ function me({ savedState: f, onSave: g }) {
     if (isNaN(i)) return;
     const v = Math.max(0, Math.min(15, i));
     j(s, t, "profundidadSondaje", o, v);
-  }, R = (s, t, o, c) => {
+  }, k = (s, t, o, c) => {
     if (c === "" || c === "-") {
-      const M = [...d[s].caras[t].margenGingival || []];
-      M[o] = c, A(s, t, { margenGingival: M });
+      const F = [...d[s].caras[t].margenGingival || []];
+      F[o] = c, m(s, t, { margenGingival: F });
       return;
     }
     const i = Number(c);
@@ -399,9 +399,9 @@ function me({ savedState: f, onSave: g }) {
     let v = i;
     i < -5 && (v = -5), i > 5 && (v = 5);
     const l = [...d[s].caras[t].margenGingival || []];
-    l[o] = v, A(s, t, { margenGingival: l });
+    l[o] = v, m(s, t, { margenGingival: l });
   }, w = (s, t, o) => {
-    m(s, { [t]: o });
+    A(s, { [t]: o });
   }, j = (s, t, o, c, i) => {
     const v = d[s].caras[t];
     let n = {};
@@ -410,12 +410,12 @@ function me({ savedState: f, onSave: g }) {
       l[c] = i, n[o] = l;
     } else
       n[o] = i;
-    A(s, t, n);
+    m(s, t, n);
   }, O = (s, t, o) => {
     const c = d[s]?.caras?.[t]?.furca?.[o] || "";
     let i;
     c === "" ? i = "1" : c === "1" ? i = "2" : c === "2" ? i = "3" : i = "", j(s, t, "furca", o, i);
-  }, k = [
+  }, R = [
     "1.8",
     "1.7",
     "1.6",
@@ -734,7 +734,7 @@ function me({ savedState: f, onSave: g }) {
               {
                 type: "text",
                 value: d[n]?.caras?.[t]?.margenGingival?.[l] ?? "",
-                onChange: (h) => R(
+                onChange: (h) => k(
                   n,
                   t,
                   l,
@@ -776,18 +776,6 @@ function me({ savedState: f, onSave: g }) {
   };
   return /* @__PURE__ */ r.jsx("div", { className: "p-6 bg-[#f9fafb] min-h-screen", children: /* @__PURE__ */ r.jsxs("div", { className: "max-w-full mx-auto", children: [
     /* @__PURE__ */ r.jsxs("div", { className: "text-center mb-8", children: [
-      /* @__PURE__ */ r.jsxs("h1", { className: "text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-4", children: [
-        /* @__PURE__ */ r.jsx(
-          "svg",
-          {
-            className: "w-10 h-10 text-blue-600",
-            fill: "currentColor",
-            viewBox: "0 0 24 24",
-            children: /* @__PURE__ */ r.jsx("path", { d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" })
-          }
-        ),
-        "Sistema de Registro Dental"
-      ] }),
       /* @__PURE__ */ r.jsx(
         "button",
         {
@@ -807,16 +795,16 @@ function me({ savedState: f, onSave: g }) {
     ] }),
     /* @__PURE__ */ r.jsxs("section", { className: "mb-12", children: [
       /* @__PURE__ */ r.jsx("h2", { className: "text-3xl font-bold mb-6 text-center text-indigo-700", children: "SUPERIOR" }),
-      Y(k),
+      Y(R),
       C(
-        k,
+        R,
         "vestibular",
         "Cara Vestibular",
         "bg-blue-50",
         "text-blue-700"
       ),
       C(
-        k,
+        R,
         "palatina",
         "Cara Palatina",
         "bg-purple-50",
@@ -843,7 +831,7 @@ function me({ savedState: f, onSave: g }) {
     ] })
   ] }) });
 }
-const xe = ({ savedState: f, onSave: g }) => /* @__PURE__ */ r.jsx(r.Fragment, { children: /* @__PURE__ */ r.jsx(me, { savedState: f, onSave: g }) });
+const pe = ({ savedState: f, onSave: g }) => /* @__PURE__ */ r.jsx(r.Fragment, { children: /* @__PURE__ */ r.jsx(Ae, { savedState: f, onSave: g }) });
 export {
-  xe as default
+  pe as default
 };

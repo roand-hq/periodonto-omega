@@ -552,16 +552,7 @@ export default function TablaDientes({savedState, onSave}) {
     <div className="p-6 bg-[#f9fafb] min-h-screen">
       <div className="max-w-full mx-auto">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-4">
-            <svg
-              className="w-10 h-10 text-blue-600"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-            </svg>
-            Sistema de Registro Dental
-          </h1>
+          
           <button
             onClick={resetearDientes}
             className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
