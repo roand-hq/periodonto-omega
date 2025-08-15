@@ -1,5 +1,5 @@
 // hooks/useDientes.js
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Lista de dientes permanentes
 const numerosDientes = [
@@ -41,13 +41,14 @@ export function useDientes(initialState = null) {
   const dientesIniciales = () =>
     Object.fromEntries(numerosDientes.map(n => [n, crearDiente(n)]));
 
-  const [dientes, setDientes] = useState(dientesIniciales() || initialState);
+  const [dientes, setDientes] = useState(initialState || dientesIniciales());
 
-  useState(() => {
+  
+  useEffect(() => {
     if (initialState) {
       setDientes(initialState);
     }
-  } , [initialState]);
+  }, [initialState]);
   
   // Actualiza cualquier campo de un diente completo
   const actualizarDiente = (numero, nuevosDatos) => {

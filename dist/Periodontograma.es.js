@@ -1,4 +1,4 @@
-import le, { useState as L } from "react";
+import se, { useState as le, useEffect as oe } from "react";
 var F = { exports: {} }, _ = {};
 /**
  * @license React
@@ -9,10 +9,10 @@ var F = { exports: {} }, _ = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var H;
-function oe() {
-  if (H) return _;
-  H = 1;
+var L;
+function ce() {
+  if (L) return _;
+  L = 1;
   var f = Symbol.for("react.transitional.element"), g = Symbol.for("react.fragment");
   function d(m, A, N) {
     var E = null;
@@ -41,13 +41,13 @@ var P = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var Q;
-function ce() {
-  return Q || (Q = 1, process.env.NODE_ENV !== "production" && function() {
+var H;
+function ie() {
+  return H || (H = 1, process.env.NODE_ENV !== "production" && function() {
     function f(e) {
       if (e == null) return null;
       if (typeof e == "function")
-        return e.$$typeof === ae ? null : e.displayName || e.name || null;
+        return e.$$typeof === te ? null : e.displayName || e.name || null;
       if (typeof e == "string") return e;
       switch (e) {
         case C:
@@ -186,7 +186,7 @@ function ce() {
       var p = a.children;
       if (p !== void 0)
         if (x)
-          if (ne(p)) {
+          if (ae(p)) {
             for (x = 0; x < p.length; x++)
               O(p[x]);
             Object.freeze && Object.freeze(p);
@@ -197,8 +197,8 @@ function ce() {
         else O(p);
       if (W.call(a, "key")) {
         p = f(e);
-        var T = Object.keys(a).filter(function(se) {
-          return se !== "key";
+        var T = Object.keys(a).filter(function(ne) {
+          return ne !== "key";
         });
         x = 0 < T.length ? "{key: someKey, " + T.join(": ..., ") + ": ...}" : "{key: someKey}", q[p + x] || (T = 0 < T.length ? "{" + T.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
@@ -235,7 +235,7 @@ React keys must be passed directly to JSX without using spread:
     function O(e) {
       typeof e == "object" && e !== null && e.$$typeof === I && e._store && (e._store.validated = 1);
     }
-    var k = le, I = Symbol.for("react.transitional.element"), Y = Symbol.for("react.portal"), C = Symbol.for("react.fragment"), s = Symbol.for("react.strict_mode"), t = Symbol.for("react.profiler"), o = Symbol.for("react.consumer"), c = Symbol.for("react.context"), i = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), n = Symbol.for("react.suspense_list"), l = Symbol.for("react.memo"), h = Symbol.for("react.lazy"), M = Symbol.for("react.activity"), ae = Symbol.for("react.client.reference"), D = k.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, W = Object.prototype.hasOwnProperty, ne = Array.isArray, G = console.createTask ? console.createTask : function() {
+    var k = se, I = Symbol.for("react.transitional.element"), Y = Symbol.for("react.portal"), C = Symbol.for("react.fragment"), s = Symbol.for("react.strict_mode"), t = Symbol.for("react.profiler"), o = Symbol.for("react.consumer"), c = Symbol.for("react.context"), i = Symbol.for("react.forward_ref"), v = Symbol.for("react.suspense"), n = Symbol.for("react.suspense_list"), l = Symbol.for("react.memo"), h = Symbol.for("react.lazy"), M = Symbol.for("react.activity"), te = Symbol.for("react.client.reference"), D = k.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, W = Object.prototype.hasOwnProperty, ae = Array.isArray, G = console.createTask ? console.createTask : function() {
       return null;
     };
     k = {
@@ -274,12 +274,12 @@ React keys must be passed directly to JSX without using spread:
     };
   }()), P;
 }
-var K;
-function ie() {
-  return K || (K = 1, process.env.NODE_ENV === "production" ? F.exports = oe() : F.exports = ce()), F.exports;
+var Q;
+function de() {
+  return Q || (Q = 1, process.env.NODE_ENV === "production" ? F.exports = ce() : F.exports = ie()), F.exports;
 }
-var r = ie();
-const de = [
+var r = de();
+const ue = [
   "1.8",
   "1.7",
   "1.6",
@@ -312,14 +312,14 @@ const de = [
   "4.6",
   "4.7",
   "4.8"
-], Z = (f) => ({
+], K = (f) => ({
   furca: f === "palatina" ? ["0", "0"] : ["0"],
   sangrado: [!1, !1, !1],
   placa: [!1, !1, !1],
   anchuraEncia: "",
   margenGingival: [0, 0, 0],
   profundidadSondaje: [0, 0, 0]
-}), ue = (f) => {
+}), fe = (f) => {
   const g = f[0], m = g === "1" || g === "2" ? "palatina" : "lingual";
   return {
     implante: !1,
@@ -327,14 +327,14 @@ const de = [
     // solo valores entre -3 y +3
     pronostico: "",
     caras: {
-      vestibular: Z("vestibular"),
-      [m]: Z(m)
+      vestibular: K("vestibular"),
+      [m]: K(m)
     }
   };
 };
-function fe(f = null) {
-  const g = () => Object.fromEntries(de.map((b) => [b, ue(b)])), [d, m] = L(g() || f);
-  return L(() => {
+function be(f = null) {
+  const g = () => Object.fromEntries(ue.map((b) => [b, fe(b)])), [d, m] = le(f || g());
+  return oe(() => {
     f && m(f);
   }, [f]), {
     dientes: d,
@@ -367,9 +367,9 @@ function fe(f = null) {
     }
   };
 }
-const ee = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEiSURBVHjapNTLKgRwFMfxT9MoKxtFJJLI0gplpYgkG4VXwBMoezasxNJaap7AAyBk4RJFYWUxlIQmGZszNS5z/9Z/c875//6Xc+F/hrCJS7zjE/dIYQ71StCGXWRjnWAbW9jDa9jPMVJIpC9OzWIDvf/ENGIR6Yhb+B3Qige8YVJpOrAfYtP5jlQYJ5RPI27xhGYYDJEtlTMae1eEwBe6VMcxruEqslMtS3hNoB2nNQidIZlAHT5qEMogm8AjemoQ6oQEjtCPhiqFxvAMs4WqtMzCzERbqY/MpaPXKiFXyAM5w3AYDtBUpshq7Fn/7ZgPxw3Giwh0502I3cj6H2byOvsQy5iKD13Ie0oWa0gWu3JL9M4FXmKwvcW6w04Mvh98DwBUVk3PjjjwlAAAAABJRU5ErkJggg==", re = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEXSURBVHjapNO/K0VxGMfxl9NVBotuUQbc5G+QTIoMd7SYlE2M/ggW/Ac2g+gOymJXFlmuxaCkxIDBj0I5lufU6XTvUfd86tup5/mc93nO5/v90lnz2EcbL/jCPVpYxoB/NIkTpLn1iwOc4T1q1/GxjprBQwGS4g1D4aljA8/RWy9CGnjqAEljirGCfxwX0V/Kin047QLpBsqmu40MR2CuBFIGgoXwbInd6RUEl7hJIuQqOsZoguGKoDZqSYRdRd9Ik8igihqQxGhVtIjXBEcVIONo4hwG42D1sv2t8ExnhWYPoO3o7xYbmyWges43FXGk8ezvNOpq7mZn6wcrWMv9Sood1MoCnMAervAY4A984g6HmC2+9DcA99V0nm6yLEsAAAAASUVORK5CYII=", te = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAADYSURBVHjarNQ9SkNBGAXQk1HBYC8mZhHp/OuCCNZCSOEGFLdiStcgpBAXYR0UbYONhQjWgolJM08eSUzie3Phg2nmMMxcpmJ+jtDBARrYwDuecId7fFmQBm4xXjJ9HP+FNDFYAclmiMtppI7XfyD5OctDvYLION7dzhr20VU8W/gOOFc+pwGHCaDtgN0EUDVgPQEk4COBMwx4TgB9htihsunDJl5KFPIHe5nYwqggdD19vIsCSC9+MTNp420FYBRP8ludyhyshiucxHU1e+JYlUfc4CG/aTIATpd8yNrLF8cAAAAASUVORK5CYII=";
-function be({ savedState: f, onSave: g }) {
-  const { dientes: d, actualizarDiente: m, actualizarCara: A, resetearDientes: N } = fe(f), E = (s, t) => {
+const Z = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEiSURBVHjapNTLKgRwFMfxT9MoKxtFJJLI0gplpYgkG4VXwBMoezasxNJaap7AAyBk4RJFYWUxlIQmGZszNS5z/9Z/c875//6Xc+F/hrCJS7zjE/dIYQ71StCGXWRjnWAbW9jDa9jPMVJIpC9OzWIDvf/ENGIR6Yhb+B3Qige8YVJpOrAfYtP5jlQYJ5RPI27xhGYYDJEtlTMae1eEwBe6VMcxruEqslMtS3hNoB2nNQidIZlAHT5qEMogm8AjemoQ6oQEjtCPhiqFxvAMs4WqtMzCzERbqY/MpaPXKiFXyAM5w3AYDtBUpshq7Fn/7ZgPxw3Giwh0502I3cj6H2byOvsQy5iKD13Ie0oWa0gWu3JL9M4FXmKwvcW6w04Mvh98DwBUVk3PjjjwlAAAAABJRU5ErkJggg==", ee = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEXSURBVHjapNO/K0VxGMfxl9NVBotuUQbc5G+QTIoMd7SYlE2M/ggW/Ac2g+gOymJXFlmuxaCkxIDBj0I5lufU6XTvUfd86tup5/mc93nO5/v90lnz2EcbL/jCPVpYxoB/NIkTpLn1iwOc4T1q1/GxjprBQwGS4g1D4aljA8/RWy9CGnjqAEljirGCfxwX0V/Kin047QLpBsqmu40MR2CuBFIGgoXwbInd6RUEl7hJIuQqOsZoguGKoDZqSYRdRd9Ik8igihqQxGhVtIjXBEcVIONo4hwG42D1sv2t8ExnhWYPoO3o7xYbmyWges43FXGk8ezvNOpq7mZn6wcrWMv9Sood1MoCnMAervAY4A984g6HmC2+9DcA99V0nm6yLEsAAAAASUVORK5CYII=", re = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAADYSURBVHjarNQ9SkNBGAXQk1HBYC8mZhHp/OuCCNZCSOEGFLdiStcgpBAXYR0UbYONhQjWgolJM08eSUzie3Phg2nmMMxcpmJ+jtDBARrYwDuecId7fFmQBm4xXjJ9HP+FNDFYAclmiMtppI7XfyD5OctDvYLION7dzhr20VU8W/gOOFc+pwGHCaDtgN0EUDVgPQEk4COBMwx4TgB9htihsunDJl5KFPIHe5nYwqggdD19vIsCSC9+MTNp420FYBRP8ludyhyshiucxHU1e+JYlUfc4CG/aTIATpd8yNrLF8cAAAAASUVORK5CYII=";
+function me({ savedState: f, onSave: g }) {
+  const { dientes: d, actualizarDiente: m, actualizarCara: A, resetearDientes: N } = be(f), E = (s, t) => {
     if (t === "" || t === "-") {
       m(s, { movilidad: t });
       return;
@@ -567,21 +567,21 @@ function be({ savedState: f, onSave: g }) {
                   return h === "1" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: ee,
+                      src: Z,
                       alt: "Furca 1",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
                   ) : h === "2" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: re,
+                      src: ee,
                       alt: "Furca 2",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
                   ) : h === "3" ? /* @__PURE__ */ r.jsx(
                     "img",
                     {
-                      src: te,
+                      src: re,
                       alt: "Furca 3",
                       className: "w-5 h-5 select-none pointer-events-none"
                     }
@@ -601,21 +601,21 @@ function be({ savedState: f, onSave: g }) {
                     return l === "1" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: ee,
+                        src: Z,
                         alt: "Furca 1",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
                     ) : l === "2" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: re,
+                        src: ee,
                         alt: "Furca 2",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
                     ) : l === "3" ? /* @__PURE__ */ r.jsx(
                       "img",
                       {
-                        src: te,
+                        src: re,
                         alt: "Furca 3",
                         className: "w-5 h-5 select-none pointer-events-none"
                       }
@@ -799,7 +799,7 @@ function be({ savedState: f, onSave: g }) {
       /* @__PURE__ */ r.jsx(
         "button",
         {
-          onClick: g,
+          onClick: () => g(d),
           className: "ml-4 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl",
           children: "Guardar"
         }
@@ -843,7 +843,7 @@ function be({ savedState: f, onSave: g }) {
     ] })
   ] }) });
 }
-const Ae = ({ savedState: f, onSave: g }) => /* @__PURE__ */ r.jsx(r.Fragment, { children: /* @__PURE__ */ r.jsx(be, { savedState: f, onSave: g }) });
+const xe = ({ savedState: f, onSave: g }) => /* @__PURE__ */ r.jsx(r.Fragment, { children: /* @__PURE__ */ r.jsx(me, { savedState: f, onSave: g }) });
 export {
-  Ae as default
+  xe as default
 };

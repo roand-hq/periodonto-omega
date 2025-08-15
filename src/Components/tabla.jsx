@@ -570,7 +570,7 @@ export default function TablaDientes({savedState, onSave}) {
           </button>
           
           <button
-          onClick={onSave}
+          onClick={() => onSave(dientes)}
           className="ml-4 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
            
             Guardar
