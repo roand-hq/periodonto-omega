@@ -48,7 +48,7 @@ export function useDientes(initialState = null) {
     if (initialState) {
       setDientes(initialState);
     }
-  }, [initialState]);
+  }, []);
   
   // Actualiza cualquier campo de un diente completo
   const actualizarDiente = (numero, nuevosDatos) => {

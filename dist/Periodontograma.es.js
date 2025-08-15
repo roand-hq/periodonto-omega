@@ -336,7 +336,7 @@ function be(f = null) {
   const g = () => Object.fromEntries(ue.map((b) => [b, fe(b)])), [d, m] = le(f || g());
   return oe(() => {
     f && m(f);
-  }, [f]), {
+  }, []), {
     dientes: d,
     actualizarDiente: (b, R) => {
       m((w) => ({
