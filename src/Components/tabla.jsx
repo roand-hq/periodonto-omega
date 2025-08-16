@@ -3,7 +3,7 @@ import vacio from "../assets/vacio.png";
 import mediolleno from "../assets/mediolleno.png";
 import lleno from "../assets/lleno.png";
 import Grafica from "./grafica";
-export default function TablaDientes({savedState, onSave}) {
+export default function TablaDientes({ savedState, onSave }) {
   const { dientes, actualizarDiente, actualizarCara, resetearDientes } =
     useDientes(savedState);
 
@@ -552,18 +552,17 @@ export default function TablaDientes({savedState, onSave}) {
     <div className="p-6 bg-[#f9fafb] min-h-screen">
       <div className="max-w-full mx-auto">
         <div className="text-center mb-8">
-          
           <button
             onClick={resetearDientes}
-            className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="bg-white  text-red-600 px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
-            Resetear todos los dientes
+            Restablecer todos los dientes
           </button>
-          
+
           <button
-          onClick={() => onSave(dientes)}
-          className="ml-4 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl">
-           
+            onClick={() => onSave(dientes)}
+            className="ml-4 bg-[#37474f] hover:bg-[#263238] text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
             Guardar
           </button>
         </div>
