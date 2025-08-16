@@ -14,16 +14,16 @@ function ce() {
   if (L) return _;
   L = 1;
   var f = Symbol.for("react.transitional.element"), g = Symbol.for("react.fragment");
-  function d(A, m, N) {
+  function d(b, m, N) {
     var E = null;
     if (N !== void 0 && (E = "" + N), m.key !== void 0 && (E = "" + m.key), "key" in m) {
       N = {};
-      for (var b in m)
-        b !== "key" && (N[b] = m[b]);
+      for (var A in m)
+        A !== "key" && (N[A] = m[A]);
     } else N = m;
     return m = N.ref, {
       $$typeof: f,
-      type: A,
+      type: b,
       key: E,
       ref: m !== void 0 ? m : null,
       props: N
@@ -107,7 +107,7 @@ function ie() {
         ), g(e);
       }
     }
-    function A(e) {
+    function b(e) {
       if (e === C) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === h)
         return "<...>";
@@ -132,7 +132,7 @@ function ie() {
       }
       return e.key !== void 0;
     }
-    function b(e, a) {
+    function A(e, a) {
       function u() {
         X || (X = !0, console.error(
           "%s: `key` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://react.dev/link/special-props)",
@@ -218,7 +218,7 @@ React keys must be passed directly to JSX without using spread:
         for (var W in a)
           W !== "key" && (u[W] = a[W]);
       } else u = a;
-      return x && b(
+      return x && A(
         u,
         typeof e == "function" ? e.displayName || e.name || "Unknown" : e
       ), w(
@@ -246,7 +246,7 @@ React keys must be passed directly to JSX without using spread:
     var X, V = {}, $ = R["react-stack-bottom-frame"].bind(
       R,
       N
-    )(), J = G(A(N)), q = {};
+    )(), J = G(b(N)), q = {};
     P.Fragment = C, P.jsx = function(e, a, u, p, S) {
       var y = 1e4 > D.recentlyCreatedOwnerStacks++;
       return j(
@@ -257,7 +257,7 @@ React keys must be passed directly to JSX without using spread:
         p,
         S,
         y ? Error("react-stack-top-frame") : $,
-        y ? G(A(e)) : J
+        y ? G(b(e)) : J
       );
     }, P.jsxs = function(e, a, u, p, S) {
       var y = 1e4 > D.recentlyCreatedOwnerStacks++;
@@ -269,7 +269,7 @@ React keys must be passed directly to JSX without using spread:
         p,
         S,
         y ? Error("react-stack-top-frame") : $,
-        y ? G(A(e)) : J
+        y ? G(b(e)) : J
       );
     };
   }()), P;
@@ -320,7 +320,7 @@ const ue = [
   margenGingival: [0, 0, 0],
   profundidadSondaje: [0, 0, 0]
 }), fe = (f) => {
-  const g = f[0], A = g === "1" || g === "2" ? "palatina" : "lingual";
+  const g = f[0], b = g === "1" || g === "2" ? "palatina" : "lingual";
   return {
     implante: !1,
     movilidad: 0,
@@ -328,34 +328,34 @@ const ue = [
     pronostico: "",
     caras: {
       vestibular: K("vestibular"),
-      [A]: K(A)
+      [b]: K(b)
     }
   };
 };
-function be(f = null) {
-  const g = () => Object.fromEntries(ue.map((b) => [b, fe(b)])), [d, A] = le(f || g());
+function Ae(f = null) {
+  const g = () => Object.fromEntries(ue.map((A) => [A, fe(A)])), [d, b] = le(f || g());
   return oe(() => {
-    f && A(f);
+    f && b(f);
   }, []), {
     dientes: d,
-    actualizarDiente: (b, k) => {
-      A((w) => ({
+    actualizarDiente: (A, k) => {
+      b((w) => ({
         ...w,
-        [b]: {
-          ...w[b],
+        [A]: {
+          ...w[A],
           ...k
         }
       }));
     },
-    actualizarCara: (b, k, w) => {
-      A((j) => ({
+    actualizarCara: (A, k, w) => {
+      b((j) => ({
         ...j,
-        [b]: {
-          ...j[b],
+        [A]: {
+          ...j[A],
           caras: {
-            ...j[b].caras,
+            ...j[A].caras,
             [k]: {
-              ...j[b].caras[k],
+              ...j[A].caras[k],
               ...w
             }
           }
@@ -363,23 +363,23 @@ function be(f = null) {
       }));
     },
     resetearDientes: () => {
-      A(g());
+      b(g());
     }
   };
 }
 const Z = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEiSURBVHjapNTLKgRwFMfxT9MoKxtFJJLI0gplpYgkG4VXwBMoezasxNJaap7AAyBk4RJFYWUxlIQmGZszNS5z/9Z/c875//6Xc+F/hrCJS7zjE/dIYQ71StCGXWRjnWAbW9jDa9jPMVJIpC9OzWIDvf/ENGIR6Yhb+B3Qige8YVJpOrAfYtP5jlQYJ5RPI27xhGYYDJEtlTMae1eEwBe6VMcxruEqslMtS3hNoB2nNQidIZlAHT5qEMogm8AjemoQ6oQEjtCPhiqFxvAMs4WqtMzCzERbqY/MpaPXKiFXyAM5w3AYDtBUpshq7Fn/7ZgPxw3Giwh0502I3cj6H2byOvsQy5iKD13Ie0oWa0gWu3JL9M4FXmKwvcW6w04Mvh98DwBUVk3PjjjwlAAAAABJRU5ErkJggg==", ee = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAEXSURBVHjapNO/K0VxGMfxl9NVBotuUQbc5G+QTIoMd7SYlE2M/ggW/Ac2g+gOymJXFlmuxaCkxIDBj0I5lufU6XTvUfd86tup5/mc93nO5/v90lnz2EcbL/jCPVpYxoB/NIkTpLn1iwOc4T1q1/GxjprBQwGS4g1D4aljA8/RWy9CGnjqAEljirGCfxwX0V/Kin047QLpBsqmu40MR2CuBFIGgoXwbInd6RUEl7hJIuQqOsZoguGKoDZqSYRdRd9Ik8igihqQxGhVtIjXBEcVIONo4hwG42D1sv2t8ExnhWYPoO3o7xYbmyWges43FXGk8ezvNOpq7mZn6wcrWMv9Sood1MoCnMAervAY4A984g6HmC2+9DcA99V0nm6yLEsAAAAASUVORK5CYII=", re = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAADYSURBVHjarNQ9SkNBGAXQk1HBYC8mZhHp/OuCCNZCSOEGFLdiStcgpBAXYR0UbYONhQjWgolJM08eSUzie3Phg2nmMMxcpmJ+jtDBARrYwDuecId7fFmQBm4xXjJ9HP+FNDFYAclmiMtppI7XfyD5OctDvYLION7dzhr20VU8W/gOOFc+pwGHCaDtgN0EUDVgPQEk4COBMwx4TgB9htihsunDJl5KFPIHe5nYwqggdD19vIsCSC9+MTNp420FYBRP8ludyhyshiucxHU1e+JYlUfc4CG/aTIATpd8yNrLF8cAAAAASUVORK5CYII=";
-function Ae({ savedState: f, onSave: g }) {
-  const { dientes: d, actualizarDiente: A, actualizarCara: m, resetearDientes: N } = be(f), E = (s, t) => {
+function be({ savedState: f, onSave: g }) {
+  const { dientes: d, actualizarDiente: b, actualizarCara: m, resetearDientes: N } = Ae(f), E = (s, t) => {
     if (t === "" || t === "-") {
-      A(s, { movilidad: t });
+      b(s, { movilidad: t });
       return;
     }
     const o = Number(t);
     if (isNaN(o))
       return;
     let c = o;
-    o < -3 && (c = -3), o > 3 && (c = 3), A(s, { movilidad: c });
-  }, b = (s, t, o, c) => {
+    o < -3 && (c = -3), o > 3 && (c = 3), b(s, { movilidad: c });
+  }, A = (s, t, o, c) => {
     if (c === "" || c === "-") {
       j(s, t, "profundidadSondaje", o, c);
       return;
@@ -401,7 +401,7 @@ function Ae({ savedState: f, onSave: g }) {
     const l = [...d[s].caras[t].margenGingival || []];
     l[o] = v, m(s, t, { margenGingival: l });
   }, w = (s, t, o) => {
-    A(s, { [t]: o });
+    b(s, { [t]: o });
   }, j = (s, t, o, c, i) => {
     const v = d[s].caras[t];
     let n = {};
@@ -759,7 +759,7 @@ function Ae({ savedState: f, onSave: g }) {
               {
                 type: "text",
                 value: d[n]?.caras?.[t]?.profundidadSondaje?.[l] ?? "",
-                onChange: (h) => b(
+                onChange: (h) => A(
                   n,
                   t,
                   l,
@@ -780,15 +780,15 @@ function Ae({ savedState: f, onSave: g }) {
         "button",
         {
           onClick: N,
-          className: "bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl",
-          children: "Resetear todos los dientes"
+          className: "bg-white  text-red-600 px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl",
+          children: "Restablecer todos los dientes"
         }
       ),
       /* @__PURE__ */ r.jsx(
         "button",
         {
           onClick: () => g(d),
-          className: "ml-4 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl",
+          className: "ml-4 bg-[#37474f] hover:bg-[#263238] text-white px-8 py-3 rounded-xl font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl",
           children: "Guardar"
         }
       )
@@ -831,7 +831,7 @@ function Ae({ savedState: f, onSave: g }) {
     ] })
   ] }) });
 }
-const pe = ({ savedState: f, onSave: g }) => /* @__PURE__ */ r.jsx(r.Fragment, { children: /* @__PURE__ */ r.jsx(Ae, { savedState: f, onSave: g }) });
+const pe = ({ savedState: f, onSave: g }) => /* @__PURE__ */ r.jsx(r.Fragment, { children: /* @__PURE__ */ r.jsx(be, { savedState: f, onSave: g }) });
 export {
   pe as default
 };
