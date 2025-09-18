@@ -546,8 +546,13 @@ export default function TablaDientes({ savedState, onSave }) {
   };
 
   const renderGrafica = (cara, lado) => {
-    return <Grafica cara={cara} lado={lado}></Grafica>;
-  };
+  return (
+    <div className="bg-white rounded-2xl shadow-2xl overflow-x-auto mb-6 p-4">
+      <Grafica cara={cara} lado={lado} dientes={dientes}/>
+    </div>
+  );
+};
+
   return (
     <div className="p-6 bg-[#f9fafb] min-h-screen">
       <div className="max-w-full mx-auto">
@@ -580,7 +585,7 @@ export default function TablaDientes({ savedState, onSave }) {
             "bg-blue-50",
             "text-blue-700"
           )}
-          {/* {renderGrafica("vestibular", "arriba")} */}
+           {renderGrafica("vestibular", "arriba")} 
           {renderTablaCara(
             dientesSuperiores,
             "palatina",
