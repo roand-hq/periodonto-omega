@@ -586,6 +586,7 @@ export default function TablaDientes({ savedState, onSave }) {
             "text-blue-700"
           )}
            {renderGrafica("vestibular", "arriba")} 
+           {renderGrafica("palatina", "arriba")} 
           {renderTablaCara(
             dientesSuperiores,
             "palatina",
@@ -608,6 +609,8 @@ export default function TablaDientes({ savedState, onSave }) {
             "bg-green-50",
             "text-green-700"
           )}
+          {renderGrafica("vestibular", "abajo")} 
+          {renderGrafica("lingual", "abajo")} 
           {renderTablaCara(
             dientesInferiores,
             "lingual",
